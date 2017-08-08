@@ -1,0 +1,631 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		842E22EC1ED3DCE700FD0F4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E22EB1ED3DCE700FD0F4B /* AppDelegate.swift */; };
+		842E22F21ED3DCE700FD0F4B /* LoginScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E22F11ED3DCE700FD0F4B /* LoginScene.swift */; };
+		842E22F41ED3DCE700FD0F4B /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E22F31ED3DCE700FD0F4B /* GameViewController.swift */; };
+		842E22F71ED3DCE700FD0F4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842E22F51ED3DCE700FD0F4B /* Main.storyboard */; };
+		842E22F91ED3DCE700FD0F4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 842E22F81ED3DCE700FD0F4B /* Assets.xcassets */; };
+		842E22FC1ED3DCE700FD0F4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842E22FA1ED3DCE700FD0F4B /* LaunchScreen.storyboard */; };
+		842E23071ED3DCE700FD0F4B /* Riddle_Me_ThereTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E23061ED3DCE700FD0F4B /* Riddle_Me_ThereTests.swift */; };
+		842E23121ED3DCE700FD0F4B /* Riddle_Me_ThereUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E23111ED3DCE700FD0F4B /* Riddle_Me_ThereUITests.swift */; };
+		842E23201ED3E1F200FD0F4B /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E231F1ED3E1F200FD0F4B /* MainMenuScene.swift */; };
+		84308FD31F346E1800AFBA7F /* ProfileScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84308FD21F346E1800AFBA7F /* ProfileScene.swift */; };
+		8430FFA81F2047C700EACEF4 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8430FFA71F2047C700EACEF4 /* Position.swift */; };
+		8430FFAA1F2047D600EACEF4 /* DatabasePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8430FFA91F2047D600EACEF4 /* DatabasePost.swift */; };
+		8430FFAC1F2047DC00EACEF4 /* ShowTableview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8430FFAB1F2047DC00EACEF4 /* ShowTableview.swift */; };
+		845002451F2AD16100A70FD6 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845002441F2AD16100A70FD6 /* MenuScene.swift */; };
+		8457F8F81F39A2AA00753C15 /* ScoresScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457F8F71F39A2AA00753C15 /* ScoresScene.swift */; };
+		846B41431F25DFE00026CFD2 /* RegisterScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B41421F25DFE00026CFD2 /* RegisterScene.swift */; };
+		849C32531F29B6D7002A32D6 /* ShowPickerViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C32521F29B6D7002A32D6 /* ShowPickerViewUI.swift */; };
+		84BC87AE1F2EDACE0005068B /* CreateScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC87AD1F2EDACE0005068B /* CreateScene.swift */; };
+		84BC87B01F2F287E0005068B /* AreaScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC87AF1F2F287E0005068B /* AreaScene.swift */; };
+		84BC87B21F2F6C920005068B /* FriendsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC87B11F2F6C920005068B /* FriendsScene.swift */; };
+		84C575B81F2B047D00A351BA /* ShowPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C575B71F2B047D00A351BA /* ShowPickerView.swift */; };
+		84EA9DBA1F0C927A0011587C /* Composer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EA9DB91F0C927A0011587C /* Composer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		842E23031ED3DCE700FD0F4B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 842E22E01ED3DCE700FD0F4B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 842E22E71ED3DCE700FD0F4B;
+			remoteInfo = "Riddle Me There";
+		};
+		842E230E1ED3DCE700FD0F4B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 842E22E01ED3DCE700FD0F4B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 842E22E71ED3DCE700FD0F4B;
+			remoteInfo = "Riddle Me There";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		842E22E81ED3DCE700FD0F4B /* Riddle Me There.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Riddle Me There.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		842E22EB1ED3DCE700FD0F4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		842E22F11ED3DCE700FD0F4B /* LoginScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScene.swift; sourceTree = "<group>"; };
+		842E22F31ED3DCE700FD0F4B /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		842E22F61ED3DCE700FD0F4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		842E22F81ED3DCE700FD0F4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		842E22FB1ED3DCE700FD0F4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		842E22FD1ED3DCE700FD0F4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		842E23021ED3DCE700FD0F4B /* Riddle Me ThereTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Riddle Me ThereTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		842E23061ED3DCE700FD0F4B /* Riddle_Me_ThereTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Riddle_Me_ThereTests.swift; sourceTree = "<group>"; };
+		842E23081ED3DCE700FD0F4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		842E230D1ED3DCE700FD0F4B /* Riddle Me ThereUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Riddle Me ThereUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		842E23111ED3DCE700FD0F4B /* Riddle_Me_ThereUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Riddle_Me_ThereUITests.swift; sourceTree = "<group>"; };
+		842E23131ED3DCE700FD0F4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		842E231F1ED3E1F200FD0F4B /* MainMenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
+		84308FD21F346E1800AFBA7F /* ProfileScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScene.swift; sourceTree = "<group>"; };
+		8430FFA71F2047C700EACEF4 /* Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
+		8430FFA91F2047D600EACEF4 /* DatabasePost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabasePost.swift; sourceTree = "<group>"; };
+		8430FFAB1F2047DC00EACEF4 /* ShowTableview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowTableview.swift; sourceTree = "<group>"; };
+		845002441F2AD16100A70FD6 /* MenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
+		8457F8F71F39A2AA00753C15 /* ScoresScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresScene.swift; sourceTree = "<group>"; };
+		846B41421F25DFE00026CFD2 /* RegisterScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScene.swift; sourceTree = "<group>"; };
+		849C32521F29B6D7002A32D6 /* ShowPickerViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPickerViewUI.swift; sourceTree = "<group>"; };
+		84BC87AD1F2EDACE0005068B /* CreateScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateScene.swift; sourceTree = "<group>"; };
+		84BC87AF1F2F287E0005068B /* AreaScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaScene.swift; sourceTree = "<group>"; };
+		84BC87B11F2F6C920005068B /* FriendsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsScene.swift; sourceTree = "<group>"; };
+		84C575B71F2B047D00A351BA /* ShowPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPickerView.swift; sourceTree = "<group>"; };
+		84EA9DB91F0C927A0011587C /* Composer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Composer.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		842E22E51ED3DCE700FD0F4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		842E22FF1ED3DCE700FD0F4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		842E230A1ED3DCE700FD0F4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8419FC0B1F21F28D0022A364 /* Allfunc */ = {
+			isa = PBXGroup;
+			children = (
+				84C575B71F2B047D00A351BA /* ShowPickerView.swift */,
+				842E22F31ED3DCE700FD0F4B /* GameViewController.swift */,
+				8430FFAB1F2047DC00EACEF4 /* ShowTableview.swift */,
+				8430FFA91F2047D600EACEF4 /* DatabasePost.swift */,
+				8430FFA71F2047C700EACEF4 /* Position.swift */,
+				842E22EB1ED3DCE700FD0F4B /* AppDelegate.swift */,
+				84EA9DB91F0C927A0011587C /* Composer.swift */,
+				849C32521F29B6D7002A32D6 /* ShowPickerViewUI.swift */,
+			);
+			path = Allfunc;
+			sourceTree = "<group>";
+		};
+		842E22DF1ED3DCE700FD0F4B = {
+			isa = PBXGroup;
+			children = (
+				842E22EA1ED3DCE700FD0F4B /* Riddle Me There */,
+				842E23051ED3DCE700FD0F4B /* Riddle Me ThereTests */,
+				842E23101ED3DCE700FD0F4B /* Riddle Me ThereUITests */,
+				842E22E91ED3DCE700FD0F4B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		842E22E91ED3DCE700FD0F4B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				842E22E81ED3DCE700FD0F4B /* Riddle Me There.app */,
+				842E23021ED3DCE700FD0F4B /* Riddle Me ThereTests.xctest */,
+				842E230D1ED3DCE700FD0F4B /* Riddle Me ThereUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		842E22EA1ED3DCE700FD0F4B /* Riddle Me There */ = {
+			isa = PBXGroup;
+			children = (
+				8419FC0B1F21F28D0022A364 /* Allfunc */,
+				842E22F51ED3DCE700FD0F4B /* Main.storyboard */,
+				842E22F81ED3DCE700FD0F4B /* Assets.xcassets */,
+				842E22FA1ED3DCE700FD0F4B /* LaunchScreen.storyboard */,
+				842E22FD1ED3DCE700FD0F4B /* Info.plist */,
+				84BC87AF1F2F287E0005068B /* AreaScene.swift */,
+				84BC87AD1F2EDACE0005068B /* CreateScene.swift */,
+				842E22F11ED3DCE700FD0F4B /* LoginScene.swift */,
+				846B41421F25DFE00026CFD2 /* RegisterScene.swift */,
+				84BC87B11F2F6C920005068B /* FriendsScene.swift */,
+				84308FD21F346E1800AFBA7F /* ProfileScene.swift */,
+				8457F8F71F39A2AA00753C15 /* ScoresScene.swift */,
+				842E231F1ED3E1F200FD0F4B /* MainMenuScene.swift */,
+				845002441F2AD16100A70FD6 /* MenuScene.swift */,
+			);
+			path = "Riddle Me There";
+			sourceTree = "<group>";
+		};
+		842E23051ED3DCE700FD0F4B /* Riddle Me ThereTests */ = {
+			isa = PBXGroup;
+			children = (
+				842E23061ED3DCE700FD0F4B /* Riddle_Me_ThereTests.swift */,
+				842E23081ED3DCE700FD0F4B /* Info.plist */,
+			);
+			path = "Riddle Me ThereTests";
+			sourceTree = "<group>";
+		};
+		842E23101ED3DCE700FD0F4B /* Riddle Me ThereUITests */ = {
+			isa = PBXGroup;
+			children = (
+				842E23111ED3DCE700FD0F4B /* Riddle_Me_ThereUITests.swift */,
+				842E23131ED3DCE700FD0F4B /* Info.plist */,
+			);
+			path = "Riddle Me ThereUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		842E22E71ED3DCE700FD0F4B /* Riddle Me There */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 842E23161ED3DCE700FD0F4B /* Build configuration list for PBXNativeTarget "Riddle Me There" */;
+			buildPhases = (
+				842E22E41ED3DCE700FD0F4B /* Sources */,
+				842E22E51ED3DCE700FD0F4B /* Frameworks */,
+				842E22E61ED3DCE700FD0F4B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Riddle Me There";
+			productName = "Riddle Me There";
+			productReference = 842E22E81ED3DCE700FD0F4B /* Riddle Me There.app */;
+			productType = "com.apple.product-type.application";
+		};
+		842E23011ED3DCE700FD0F4B /* Riddle Me ThereTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 842E23191ED3DCE700FD0F4B /* Build configuration list for PBXNativeTarget "Riddle Me ThereTests" */;
+			buildPhases = (
+				842E22FE1ED3DCE700FD0F4B /* Sources */,
+				842E22FF1ED3DCE700FD0F4B /* Frameworks */,
+				842E23001ED3DCE700FD0F4B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				842E23041ED3DCE700FD0F4B /* PBXTargetDependency */,
+			);
+			name = "Riddle Me ThereTests";
+			productName = "Riddle Me ThereTests";
+			productReference = 842E23021ED3DCE700FD0F4B /* Riddle Me ThereTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		842E230C1ED3DCE700FD0F4B /* Riddle Me ThereUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 842E231C1ED3DCE700FD0F4B /* Build configuration list for PBXNativeTarget "Riddle Me ThereUITests" */;
+			buildPhases = (
+				842E23091ED3DCE700FD0F4B /* Sources */,
+				842E230A1ED3DCE700FD0F4B /* Frameworks */,
+				842E230B1ED3DCE700FD0F4B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				842E230F1ED3DCE700FD0F4B /* PBXTargetDependency */,
+			);
+			name = "Riddle Me ThereUITests";
+			productName = "Riddle Me ThereUITests";
+			productReference = 842E230D1ED3DCE700FD0F4B /* Riddle Me ThereUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		842E22E01ED3DCE700FD0F4B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = admin;
+				TargetAttributes = {
+					842E22E71ED3DCE700FD0F4B = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 59473K345E;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+					};
+					842E23011ED3DCE700FD0F4B = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 59473K345E;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 842E22E71ED3DCE700FD0F4B;
+					};
+					842E230C1ED3DCE700FD0F4B = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 59473K345E;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 842E22E71ED3DCE700FD0F4B;
+					};
+				};
+			};
+			buildConfigurationList = 842E22E31ED3DCE700FD0F4B /* Build configuration list for PBXProject "Riddle Me There" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 842E22DF1ED3DCE700FD0F4B;
+			productRefGroup = 842E22E91ED3DCE700FD0F4B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				842E22E71ED3DCE700FD0F4B /* Riddle Me There */,
+				842E23011ED3DCE700FD0F4B /* Riddle Me ThereTests */,
+				842E230C1ED3DCE700FD0F4B /* Riddle Me ThereUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		842E22E61ED3DCE700FD0F4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				842E22F71ED3DCE700FD0F4B /* Main.storyboard in Resources */,
+				842E22F91ED3DCE700FD0F4B /* Assets.xcassets in Resources */,
+				842E22FC1ED3DCE700FD0F4B /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		842E23001ED3DCE700FD0F4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		842E230B1ED3DCE700FD0F4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		842E22E41ED3DCE700FD0F4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84EA9DBA1F0C927A0011587C /* Composer.swift in Sources */,
+				84BC87B01F2F287E0005068B /* AreaScene.swift in Sources */,
+				84C575B81F2B047D00A351BA /* ShowPickerView.swift in Sources */,
+				842E22F21ED3DCE700FD0F4B /* LoginScene.swift in Sources */,
+				8430FFAC1F2047DC00EACEF4 /* ShowTableview.swift in Sources */,
+				846B41431F25DFE00026CFD2 /* RegisterScene.swift in Sources */,
+				84BC87B21F2F6C920005068B /* FriendsScene.swift in Sources */,
+				8430FFA81F2047C700EACEF4 /* Position.swift in Sources */,
+				84BC87AE1F2EDACE0005068B /* CreateScene.swift in Sources */,
+				84308FD31F346E1800AFBA7F /* ProfileScene.swift in Sources */,
+				842E22F41ED3DCE700FD0F4B /* GameViewController.swift in Sources */,
+				8457F8F81F39A2AA00753C15 /* ScoresScene.swift in Sources */,
+				842E23201ED3E1F200FD0F4B /* MainMenuScene.swift in Sources */,
+				842E22EC1ED3DCE700FD0F4B /* AppDelegate.swift in Sources */,
+				845002451F2AD16100A70FD6 /* MenuScene.swift in Sources */,
+				8430FFAA1F2047D600EACEF4 /* DatabasePost.swift in Sources */,
+				849C32531F29B6D7002A32D6 /* ShowPickerViewUI.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		842E22FE1ED3DCE700FD0F4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				842E23071ED3DCE700FD0F4B /* Riddle_Me_ThereTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		842E23091ED3DCE700FD0F4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				842E23121ED3DCE700FD0F4B /* Riddle_Me_ThereUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		842E23041ED3DCE700FD0F4B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 842E22E71ED3DCE700FD0F4B /* Riddle Me There */;
+			targetProxy = 842E23031ED3DCE700FD0F4B /* PBXContainerItemProxy */;
+		};
+		842E230F1ED3DCE700FD0F4B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 842E22E71ED3DCE700FD0F4B /* Riddle Me There */;
+			targetProxy = 842E230E1ED3DCE700FD0F4B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		842E22F51ED3DCE700FD0F4B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				842E22F61ED3DCE700FD0F4B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		842E22FA1ED3DCE700FD0F4B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				842E22FB1ED3DCE700FD0F4B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		842E23141ED3DCE700FD0F4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		842E23151ED3DCE700FD0F4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		842E23171ED3DCE700FD0F4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 59473K345E;
+				INFOPLIST_FILE = "Riddle Me There/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mobi.aame.game1.Riddle-Me-There";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		842E23181ED3DCE700FD0F4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 59473K345E;
+				INFOPLIST_FILE = "Riddle Me There/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mobi.aame.game1.Riddle-Me-There";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		842E231A1ED3DCE700FD0F4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 59473K345E;
+				INFOPLIST_FILE = "Riddle Me ThereTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mobi.aame.game1.Riddle-Me-ThereTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Riddle Me There.app/Riddle Me There";
+			};
+			name = Debug;
+		};
+		842E231B1ED3DCE700FD0F4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 59473K345E;
+				INFOPLIST_FILE = "Riddle Me ThereTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mobi.aame.game1.Riddle-Me-ThereTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Riddle Me There.app/Riddle Me There";
+			};
+			name = Release;
+		};
+		842E231D1ED3DCE700FD0F4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 59473K345E;
+				INFOPLIST_FILE = "Riddle Me ThereUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mobi.aame.game1.Riddle-Me-ThereUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = "Riddle Me There";
+			};
+			name = Debug;
+		};
+		842E231E1ED3DCE700FD0F4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 59473K345E;
+				INFOPLIST_FILE = "Riddle Me ThereUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mobi.aame.game1.Riddle-Me-ThereUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = "Riddle Me There";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		842E22E31ED3DCE700FD0F4B /* Build configuration list for PBXProject "Riddle Me There" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				842E23141ED3DCE700FD0F4B /* Debug */,
+				842E23151ED3DCE700FD0F4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		842E23161ED3DCE700FD0F4B /* Build configuration list for PBXNativeTarget "Riddle Me There" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				842E23171ED3DCE700FD0F4B /* Debug */,
+				842E23181ED3DCE700FD0F4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		842E23191ED3DCE700FD0F4B /* Build configuration list for PBXNativeTarget "Riddle Me ThereTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				842E231A1ED3DCE700FD0F4B /* Debug */,
+				842E231B1ED3DCE700FD0F4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		842E231C1ED3DCE700FD0F4B /* Build configuration list for PBXNativeTarget "Riddle Me ThereUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				842E231D1ED3DCE700FD0F4B /* Debug */,
+				842E231E1ED3DCE700FD0F4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 842E22E01ED3DCE700FD0F4B /* Project object */;
+}
