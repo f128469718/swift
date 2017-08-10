@@ -23,8 +23,6 @@
 		845002451F2AD16100A70FD6 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845002441F2AD16100A70FD6 /* MenuScene.swift */; };
 		8457F8F81F39A2AA00753C15 /* ScoresScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457F8F71F39A2AA00753C15 /* ScoresScene.swift */; };
 		846B41431F25DFE00026CFD2 /* RegisterScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B41421F25DFE00026CFD2 /* RegisterScene.swift */; };
-		847E755B1F39AD8100F18CA2 /* Fileabc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E755A1F39AD8100F18CA2 /* Fileabc.swift */; };
-		847E755D1F39AE1C00F18CA2 /* Filecba.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E755C1F39AE1B00F18CA2 /* Filecba.swift */; };
 		849C32531F29B6D7002A32D6 /* ShowPickerViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C32521F29B6D7002A32D6 /* ShowPickerViewUI.swift */; };
 		84BB56291F39AEA600C9D33E /* testabc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BB56281F39AEA500C9D33E /* testabc.swift */; };
 		84BC87AE1F2EDACE0005068B /* CreateScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC87AD1F2EDACE0005068B /* CreateScene.swift */; };
@@ -74,8 +72,6 @@
 		845002441F2AD16100A70FD6 /* MenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
 		8457F8F71F39A2AA00753C15 /* ScoresScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresScene.swift; sourceTree = "<group>"; };
 		846B41421F25DFE00026CFD2 /* RegisterScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScene.swift; sourceTree = "<group>"; };
-		847E755A1F39AD8100F18CA2 /* Fileabc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fileabc.swift; sourceTree = "<group>"; };
-		847E755C1F39AE1B00F18CA2 /* Filecba.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filecba.swift; sourceTree = "<group>"; };
 		849C32521F29B6D7002A32D6 /* ShowPickerViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPickerViewUI.swift; sourceTree = "<group>"; };
 		84BB56281F39AEA500C9D33E /* testabc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testabc.swift; sourceTree = "<group>"; };
 		84BC87AD1F2EDACE0005068B /* CreateScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateScene.swift; sourceTree = "<group>"; };
@@ -128,8 +124,6 @@
 		842E22DF1ED3DCE700FD0F4B = {
 			isa = PBXGroup;
 			children = (
-				847E755A1F39AD8100F18CA2 /* Fileabc.swift */,
-				847E755C1F39AE1B00F18CA2 /* Filecba.swift */,
 				842E22EA1ED3DCE700FD0F4B /* Riddle Me There */,
 				842E23051ED3DCE700FD0F4B /* Riddle Me ThereTests */,
 				842E23101ED3DCE700FD0F4B /* Riddle Me ThereUITests */,
@@ -336,7 +330,6 @@
 				84BB56291F39AEA600C9D33E /* testabc.swift in Sources */,
 				84BC87B21F2F6C920005068B /* FriendsScene.swift in Sources */,
 				8430FFA81F2047C700EACEF4 /* Position.swift in Sources */,
-				847E755B1F39AD8100F18CA2 /* Fileabc.swift in Sources */,
 				84BC87AE1F2EDACE0005068B /* CreateScene.swift in Sources */,
 				84308FD31F346E1800AFBA7F /* ProfileScene.swift in Sources */,
 				842E22F41ED3DCE700FD0F4B /* GameViewController.swift in Sources */,
@@ -345,7 +338,6 @@
 				842E22EC1ED3DCE700FD0F4B /* AppDelegate.swift in Sources */,
 				845002451F2AD16100A70FD6 /* MenuScene.swift in Sources */,
 				8430FFAA1F2047D600EACEF4 /* DatabasePost.swift in Sources */,
-				847E755D1F39AE1C00F18CA2 /* Filecba.swift in Sources */,
 				849C32531F29B6D7002A32D6 /* ShowPickerViewUI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

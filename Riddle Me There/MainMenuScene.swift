@@ -66,7 +66,7 @@ class MainMenuScene: SKScene {
                 
                 print("Press loginbutton")
                 
-                composer.NextScene(nextScene: Fileabc(size: self.size),view: &sView!)
+                composer.NextScene(nextScene: LoginScene(size: self.size),view: &sView!)
               
                 
             }else if touchedNode == registerButton {
