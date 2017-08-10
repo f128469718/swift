@@ -69,7 +69,7 @@ class MainMenuScene: SKScene {
                 print("Press loginbutton")
                 
                 composer.NextScene(nextScene: LoginScene(size: self.size),view: &sView!)
-                
+
                 
             }else if touchedNode == registerButton {
                 print("Press registerButton")
