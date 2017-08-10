@@ -15,14 +15,13 @@ class LoginScene: SKScene {
     
     let returnButton = SKSpriteNode(imageNamed: "return")
     let loginbutton = SKSpriteNode(imageNamed: "Login buttom1")
-    var native0 : UITextField!
-    var native1 : UITextField!
+    var emailtextfield : UITextField!
+    var pwdtextfield : UITextField!
     var email : UIImageView!
     var password : UIImageView!
     var switchDemo : UISwitch!
     var names = [String]()
     let testarray = [Position(),Composer()] as [Any]
-    
     override func didMove(to view: SKView) {
         sView = self.view
         /*var gameTableView = ShowTableview()
@@ -45,9 +44,9 @@ class LoginScene: SKScene {
         password.frame = CGRect(x: view.bounds.width*0.18, y: view.bounds.height * 0.40, width: 80, height: 30)
         
         
-        native0 = UIdesign().textfiled(x: view.bounds.width*0.35, y: view.bounds.height * 0.42, width: 200, height: 20, text: "請輸入信箱",level: 1)
+        emailtextfield = UIdesign().textfiled(x: view.bounds.width*0.35, y: view.bounds.height * 0.42, width: 200, height: 20, text: "請輸入信箱", level: 1)
         
-        native1 = UIdesign().textfiled(x: view.bounds.width*0.35, y: view.bounds.height * 0.3, width: 200, height: 20, text: "請輸入密碼",level: 1)
+        pwdtextfield = UIdesign().textfiled(x: view.bounds.width*0.35, y: view.bounds.height * 0.3, width: 200, height: 20, text: "請輸入密碼", level: 1)
         
         
         
@@ -67,8 +66,8 @@ class LoginScene: SKScene {
         
         view.addSubview(email)
         view.addSubview(password)
-        view.addSubview(native0)
-        view.addSubview(native1)
+        view.addSubview(emailtextfield)
+        view.addSubview(pwdtextfield)
         view.addSubview(switchDemo)
         addChild(background)
         addChild(automatic)
@@ -78,21 +77,21 @@ class LoginScene: SKScene {
         
         email.translatesAutoresizingMaskIntoConstraints = false
         password.translatesAutoresizingMaskIntoConstraints = false
-        native0.translatesAutoresizingMaskIntoConstraints = false
-        native1.translatesAutoresizingMaskIntoConstraints = false
+        emailtextfield.translatesAutoresizingMaskIntoConstraints = false
+        pwdtextfield.translatesAutoresizingMaskIntoConstraints = false
         switchDemo.translatesAutoresizingMaskIntoConstraints = false
         
         //email
         pos.autoPosition(item1: email, item2: self.view!, topValue: view.bounds.height * 0.3, bottomValue: -(view.bounds.height * 0.7), leftValue: view.bounds.width * 0.2, rightValue: -(view.bounds.width * 0.8), widthValue: 0.12, heightValue: 0.08)
         
         //native0
-        pos.autoPosition(item1: native0, item2: self.view!, topValue: view.bounds.height * 0.315, bottomValue: -(view.bounds.height * 0.685), leftValue: view.bounds.width * 0.4, rightValue: -(view.bounds.width * 0.6), widthValue: 0.28, heightValue: 0.05)
+        pos.autoPosition(item1: emailtextfield, item2: self.view!, topValue: view.bounds.height * 0.315, bottomValue: -(view.bounds.height * 0.685), leftValue: view.bounds.width * 0.4, rightValue: -(view.bounds.width * 0.6), widthValue: 0.28, heightValue: 0.05)
         
         //password
         pos.autoPosition(item1: password, item2: self.view!, topValue: view.bounds.height * 0.45, bottomValue: -(view.bounds.height * 0.55), leftValue: view.bounds.width * 0.2, rightValue: -(view.bounds.width * 0.8), widthValue: 0.12, heightValue: 0.08)
         
         //native1
-        pos.autoPosition(item1: native1, item2: self.view!, topValue: view.bounds.height * 0.465, bottomValue: -(view.bounds.height * 0.535), leftValue: view.bounds.width * 0.4, rightValue: -(view.bounds.width * 0.6), widthValue: 0.28, heightValue: 0.05)
+        pos.autoPosition(item1: pwdtextfield, item2: self.view!, topValue: view.bounds.height * 0.465, bottomValue: -(view.bounds.height * 0.535), leftValue: view.bounds.width * 0.4, rightValue: -(view.bounds.width * 0.6), widthValue: 0.28, heightValue: 0.05)
         
         //switchDemo
         pos.autoPosition(item1: switchDemo, item2: self.view!, topValue: view.bounds.height * 0.6, bottomValue: -(view.bounds.height * 0.4), leftValue: view.bounds.width * 0.6, rightValue: -(view.bounds.width * 0.4), widthValue: 0.28, heightValue: 0.05)
@@ -111,9 +110,9 @@ class LoginScene: SKScene {
             if touchedNode ==  loginbutton {
                 
                 print("Press loginbutton")
-                print("native0.text : \(native0.text!)")
-                print("native1.text : \(native1.text!)")
-                var data = "email=\(native0.text!)&password=\(native1.text!)"
+                print("native0.text : \(emailtextfield.text!)")
+                print("native1.text : \(pwdtextfield.text!)")
+                var data = "email=\(emailtextfield.text!)&password=\(pwdtextfield.text!)"
                 
                 emptyString = DatabasePost().postDatabase(URL: "http://140.131.12.56/swift/login.php", valuedata: data, method: 2)
                 
@@ -123,15 +122,16 @@ class LoginScene: SKScene {
                 
                 
                 if (emptyString.value == "true"){
-                     composer.NextScene(nextScene: MainMenuScene(size: self.size),view: &sView!)
-                     email.removeFromSuperview()
-                     password.removeFromSuperview()
-                     native0.removeFromSuperview()
-                     native1.removeFromSuperview()
-                     switchDemo.removeFromSuperview()
-                 }else{
-                 
-                 }
+                    account = emailtextfield.text
+                    composer.NextScene(nextScene: MainMenuScene(size: self.size),view: &sView!)
+                    email.removeFromSuperview()
+                    password.removeFromSuperview()
+                    emailtextfield.removeFromSuperview()
+                    pwdtextfield.removeFromSuperview()
+                    switchDemo.removeFromSuperview()
+                }else{
+                    
+                }
                 
                 
                 
@@ -143,8 +143,8 @@ class LoginScene: SKScene {
                 
                 email.removeFromSuperview()
                 password.removeFromSuperview()
-                native0.removeFromSuperview()
-                native1.removeFromSuperview()
+                emailtextfield.removeFromSuperview()
+                pwdtextfield.removeFromSuperview()
                 switchDemo.removeFromSuperview()
             }
         }
