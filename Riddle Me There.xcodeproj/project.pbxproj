@@ -20,6 +20,7 @@
 		8430FFA81F2047C700EACEF4 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8430FFA71F2047C700EACEF4 /* Position.swift */; };
 		8430FFAA1F2047D600EACEF4 /* DatabasePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8430FFA91F2047D600EACEF4 /* DatabasePost.swift */; };
 		8430FFAC1F2047DC00EACEF4 /* ShowTableview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8430FFAB1F2047DC00EACEF4 /* ShowTableview.swift */; };
+		84374A8D1F3C127B00718281 /* SolveScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84374A8C1F3C127B00718281 /* SolveScene.swift */; };
 		845002451F2AD16100A70FD6 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845002441F2AD16100A70FD6 /* MenuScene.swift */; };
 		8457F8F81F39A2AA00753C15 /* ScoresScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457F8F71F39A2AA00753C15 /* ScoresScene.swift */; };
 		846B41431F25DFE00026CFD2 /* RegisterScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B41421F25DFE00026CFD2 /* RegisterScene.swift */; };
@@ -68,6 +69,7 @@
 		8430FFA71F2047C700EACEF4 /* Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		8430FFA91F2047D600EACEF4 /* DatabasePost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabasePost.swift; sourceTree = "<group>"; };
 		8430FFAB1F2047DC00EACEF4 /* ShowTableview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowTableview.swift; sourceTree = "<group>"; };
+		84374A8C1F3C127B00718281 /* SolveScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolveScene.swift; sourceTree = "<group>"; };
 		845002441F2AD16100A70FD6 /* MenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
 		8457F8F71F39A2AA00753C15 /* ScoresScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresScene.swift; sourceTree = "<group>"; };
 		846B41421F25DFE00026CFD2 /* RegisterScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScene.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				8457F8F71F39A2AA00753C15 /* ScoresScene.swift */,
 				842E231F1ED3E1F200FD0F4B /* MainMenuScene.swift */,
 				845002441F2AD16100A70FD6 /* MenuScene.swift */,
+				84374A8C1F3C127B00718281 /* SolveScene.swift */,
 			);
 			path = "Riddle Me There";
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				8457F8F81F39A2AA00753C15 /* ScoresScene.swift in Sources */,
 				842E23201ED3E1F200FD0F4B /* MainMenuScene.swift in Sources */,
 				842E22EC1ED3DCE700FD0F4B /* AppDelegate.swift in Sources */,
+				84374A8D1F3C127B00718281 /* SolveScene.swift in Sources */,
 				845002451F2AD16100A70FD6 /* MenuScene.swift in Sources */,
 				8430FFAA1F2047D600EACEF4 /* DatabasePost.swift in Sources */,
 				849C32531F29B6D7002A32D6 /* ShowPickerViewUI.swift in Sources */,
