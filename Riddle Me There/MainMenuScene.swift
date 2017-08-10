@@ -15,6 +15,7 @@ struct Country {
     let name: Array<String>
     let chname: Array<String>
     let abbname: Array<String>
+    let value4 : Array<String>
     let value: String
 }
 
@@ -22,7 +23,7 @@ struct Country {
 var emptyString: Country!
 let pos = Position()
 let composer = Composer()
-
+var account : String!
 class MainMenuScene: SKScene {
     
     
@@ -34,8 +35,9 @@ class MainMenuScene: SKScene {
         sView = self.view
         
         let background = SKSpriteNode(imageNamed: "Background-2")
+        
         let leftImage = SKSpriteNode(imageNamed: "map")
-     
+        
         
         background.position = CGPoint(x: size.width/2, y: size.height/2)
         leftImage.position = CGPoint(x: size.width/3, y: size.height/2)
@@ -67,7 +69,7 @@ class MainMenuScene: SKScene {
                 print("Press loginbutton")
                 
                 composer.NextScene(nextScene: LoginScene(size: self.size),view: &sView!)
-              
+
                 
             }else if touchedNode == registerButton {
                 print("Press registerButton")
@@ -83,8 +85,8 @@ class MainMenuScene: SKScene {
         
     }
     
-   
-
+    
+    
 }
 
 

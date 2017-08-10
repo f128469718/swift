@@ -16,6 +16,7 @@ class DatabasePost {
         var names = [String]()
         var chnames = [String]()
         var abbnames = [String]()
+        var arrayvalue4 = [String]()
         var values = ""
         let request = NSMutableURLRequest(url: NSURL(string: URL)! as URL)
         /*let request = NSMutableURLRequest(url: NSURL(string: "http://140.131.12.56/test.php")! as URL)*/
@@ -36,8 +37,9 @@ class DatabasePost {
                 return
             }else{
                 let json = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions()) as? [AnyObject]
-                //print("json : \(json)")
+                print("json : \(json)")
                 if (method == 1 ){
+                    
                     for jsons in json!! {
                         if let name = jsons["name"] as? String {
                             if let chname = jsons["ch_name"] as? String {
@@ -45,8 +47,25 @@ class DatabasePost {
                                     names.append(name)
                                     chnames.append(chname)
                                     abbnames.append(abbname)
-                                    let user = Country(name: names, chname: chnames, abbname: abbnames, value: "")
+                                    let user = Country(name: names, chname: chnames, abbname: abbnames, value4: arrayvalue4, value: "")
                                     stringValue = user
+                                }
+                            }
+                        }
+                    }
+                }else if (method == 3){
+                    for jsons in json!! {
+                        if let title = jsons["title"] as? String {
+                            if let riddle = jsons["riddle"] as? String {
+                                if let riddlelike = jsons["riddlelike"] as? String {
+                                    if let riddledislike = jsons["riddledislike"] as? String {
+                                        names.append(title)
+                                        chnames.append(riddle)
+                                        abbnames.append(riddlelike)
+                                        arrayvalue4.append(riddledislike)
+                                        let user = Country(name: names, chname: chnames, abbname: abbnames, value4: arrayvalue4, value: "")
+                                        stringValue = user
+                                    }
                                 }
                             }
                         }
@@ -73,12 +92,12 @@ class DatabasePost {
             print("data : \(String(describing: data))")
             if (method == 2){
                 if let stringData = String(data: data!, encoding: String.Encoding.utf8) {
-                 print("stringData : \(stringData)") //JSONSerialization
-                 //self.splitedArray = stringData.components(separatedBy:",")
-                 //print("splitedArray : \(self.splitedArray)")
-                    let user = Country(name: names, chname: chnames, abbname: abbnames, value: stringData)
+                    print("stringData : \(stringData)") //JSONSerialization
+                    //self.splitedArray = stringData.components(separatedBy:",")
+                    //print("splitedArray : \(self.splitedArray)")
+                    let user = Country(name: names, chname: chnames, abbname: abbnames, value4: arrayvalue4, value: stringData)
                     stringValue = user
-                 }
+                }
             }
             
             //發出信號燈
