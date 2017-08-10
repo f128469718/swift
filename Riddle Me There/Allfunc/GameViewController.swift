@@ -62,8 +62,8 @@ class GameViewController: UIViewController {
             print(currentLocation.coordinate.latitude)
             print(currentLocation.coordinate.longitude)
         }
-        let scene =
-            ScoresScene(size:CGSize(width: 480, height: 320))
+        let scene = CreateScene(size:CGSize(width: 480, height: 320))
+
         let skView = self.view as! SKView
         skView.showsFPS = true
         skView.showsNodeCount = true
