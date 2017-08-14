@@ -14,10 +14,12 @@ var titlefield : UITextField!
 var riddlefield : UITextView!
 var camerabutton : UIButton!
 
-class CreateScene: SKScene {
+class CreateScene: SKScene,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     var sView : SKView?
-
-
+    var camerabutton : UIButton!
+    var maskingCameraRollchoice:Bool = false
+    var newImage : SKSpriteNode!
+    var Riddlepic : UIImage!
     override func didMove(to view: SKView) {
         sView = self.view
 
@@ -33,9 +35,7 @@ class CreateScene: SKScene {
         submitbutton.setBackgroundImage(UIImage(named: "submit button"), for: UIControlState.normal)
         submitbutton.addTarget(self,action: #selector(submitbuttonevent),for: .touchUpInside)//修改按鈕細節
        
-        camerabutton = UIButton(frame:CGRect(x: 320, y: 210, width: 60, height: 60))
-        camerabutton.setBackgroundImage(UIImage(named: "camera"), for: UIControlState.normal)
-        camerabutton.addTarget(self,action: #selector(camerabuttonevent),for: .touchUpInside)//修改按鈕細節
+        camerabutton = camerabtn()
         
    
 
@@ -56,15 +56,41 @@ class CreateScene: SKScene {
         pos.autoPosition(item1: submitbutton, item2: self.view!, topValue: view.bounds.height * 0.75, bottomValue: -(view.bounds.height * 0.25), leftValue: view.bounds.width * 0.01, rightValue: -(view.bounds.width * 0.99), widthValue: 0.4, heightValue: 0.3)
         
         pos.autoPosition(item1: camerabutton, item2: self.view!, topValue: view.bounds.height * 0.64, bottomValue: -(view.bounds.height * 0.36), leftValue: view.bounds.width * 0.57, rightValue: -(view.bounds.width * 0.43), widthValue: 0.08, heightValue: 0.12)
+        
+        
+        
     }
     
     // submit button event
     @objc func submitbuttonevent(sender:UIButton){
         
+        /*var data = "email=andy@gmail.com&title=\(titlefield.text!)&Riddle=\(riddlefield.text!)"
+        
+        emptyString = DatabasePost().postDatabase(URL: "http://140.131.12.56/swift/createriddle.php", valuedata: data, method: 2)*/
+        
+        DatabasePost().uploadImage(URL: "http://140.131.12.56/swift/createriddle.php", pic: Riddlepic, email: "andy@gmail.com", title: titlefield.text!, riddle: riddlefield.text!)
+        composer.NextScene(nextScene: MenuScene(size: self.size),view: &sView!)
+        camerabutton.removeFromSuperview()
+        submitbutton.removeFromSuperview()
+        titlefield.removeFromSuperview()
+        riddlefield.removeFromSuperview()
+
     }
     
     // camera button event
     @objc func camerabuttonevent(sender:UIButton){
         
+        getPhotoFromSource(source: UIImagePickerControllerSourceType.photoLibrary)
+        
     }
+    
+    func camerabtn() -> UIButton{
+        
+        var btn = UIButton(frame:CGRect(x: 320, y: 210, width: 60, height: 60))
+        btn.setBackgroundImage(UIImage(named: "camera"), for: UIControlState.normal)
+        btn.addTarget(self,action: #selector(camerabuttonevent),for: .touchUpInside)//修改按鈕細節
+        return btn
+    }
+    
+    
 }
