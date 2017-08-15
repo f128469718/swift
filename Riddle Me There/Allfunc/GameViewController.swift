@@ -62,11 +62,8 @@ class GameViewController: UIViewController {
             print(currentLocation.coordinate.latitude)
             print(currentLocation.coordinate.longitude)
         }
-
-        let scene = ExtraScene(size:CGSize(width: 480, height: 320))
-
-
-
+        let scene = FriendsScene(size:CGSize(width: 480, height: 320))
+        
         let skView = self.view as! SKView
         skView.showsFPS = true
         skView.showsNodeCount = true
@@ -92,3 +89,4 @@ class GameViewController: UIViewController {
     
     
 }
+
