@@ -24,12 +24,12 @@ class SolveScene : SKScene {
         gameTableView.sView = sView
         gameTableView.vWidth = sView.bounds.width
         gameTableView.vHeight = sView.bounds.height
-        print(emptyString.name)
+        print(emptyString.value1)
         gameTableView.title = "Solve Riddle"
         
-        gameTableView.items = emptyString.name
-        gameTableView.items2 = emptyString.chname
-        gameTableView.items3 = emptyString.abbname
+        gameTableView.items = emptyString.value1
+        gameTableView.items2 = emptyString.value2
+        gameTableView.items3 = emptyString.value3
         gameTableView.items4 = emptyString.value4
         gameTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         gameTableView.frame=CGRect(x:20,y:50,width:280,height:200)

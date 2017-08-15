@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84264E531F419B3F005CB3C7 /* ExtraScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84264E521F419B3F005CB3C7 /* ExtraScene.swift */; };
 		842E22EC1ED3DCE700FD0F4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E22EB1ED3DCE700FD0F4B /* AppDelegate.swift */; };
 		842E22F21ED3DCE700FD0F4B /* LoginScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E22F11ED3DCE700FD0F4B /* LoginScene.swift */; };
 		842E22F41ED3DCE700FD0F4B /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E22F31ED3DCE700FD0F4B /* GameViewController.swift */; };
@@ -25,6 +26,7 @@
 		8457F8F81F39A2AA00753C15 /* ScoresScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457F8F71F39A2AA00753C15 /* ScoresScene.swift */; };
 		846B41431F25DFE00026CFD2 /* RegisterScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B41421F25DFE00026CFD2 /* RegisterScene.swift */; };
 		849C32531F29B6D7002A32D6 /* ShowPickerViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C32521F29B6D7002A32D6 /* ShowPickerViewUI.swift */; };
+		84AEE2A01F3D56A300DA4900 /* CreateScene_Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AEE29F1F3D56A300DA4900 /* CreateScene_Camera.swift */; };
 		84BC87AE1F2EDACE0005068B /* CreateScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC87AD1F2EDACE0005068B /* CreateScene.swift */; };
 		84BC87B01F2F287E0005068B /* AreaScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC87AF1F2F287E0005068B /* AreaScene.swift */; };
 		84BC87B21F2F6C920005068B /* FriendsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC87B11F2F6C920005068B /* FriendsScene.swift */; };
@@ -50,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		84264E521F419B3F005CB3C7 /* ExtraScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraScene.swift; sourceTree = "<group>"; };
 		842E22E81ED3DCE700FD0F4B /* Riddle Me There.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Riddle Me There.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		842E22EB1ED3DCE700FD0F4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		842E22F11ED3DCE700FD0F4B /* LoginScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScene.swift; sourceTree = "<group>"; };
@@ -74,6 +77,7 @@
 		8457F8F71F39A2AA00753C15 /* ScoresScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresScene.swift; sourceTree = "<group>"; };
 		846B41421F25DFE00026CFD2 /* RegisterScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScene.swift; sourceTree = "<group>"; };
 		849C32521F29B6D7002A32D6 /* ShowPickerViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPickerViewUI.swift; sourceTree = "<group>"; };
+		84AEE29F1F3D56A300DA4900 /* CreateScene_Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateScene_Camera.swift; sourceTree = "<group>"; };
 		84BC87AD1F2EDACE0005068B /* CreateScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateScene.swift; sourceTree = "<group>"; };
 		84BC87AF1F2F287E0005068B /* AreaScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaScene.swift; sourceTree = "<group>"; };
 		84BC87B11F2F6C920005068B /* FriendsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsScene.swift; sourceTree = "<group>"; };
@@ -117,6 +121,7 @@
 				842E22EB1ED3DCE700FD0F4B /* AppDelegate.swift */,
 				84EA9DB91F0C927A0011587C /* Composer.swift */,
 				849C32521F29B6D7002A32D6 /* ShowPickerViewUI.swift */,
+				84AEE29F1F3D56A300DA4900 /* CreateScene_Camera.swift */,
 			);
 			path = Allfunc;
 			sourceTree = "<group>";
@@ -156,6 +161,7 @@
 				84BC87B11F2F6C920005068B /* FriendsScene.swift */,
 				84308FD21F346E1800AFBA7F /* ProfileScene.swift */,
 				8457F8F71F39A2AA00753C15 /* ScoresScene.swift */,
+				84264E521F419B3F005CB3C7 /* ExtraScene.swift */,
 				842E231F1ED3E1F200FD0F4B /* MainMenuScene.swift */,
 				845002441F2AD16100A70FD6 /* MenuScene.swift */,
 				84374A8C1F3C127B00718281 /* SolveScene.swift */,
@@ -323,12 +329,14 @@
 			files = (
 				84EA9DBA1F0C927A0011587C /* Composer.swift in Sources */,
 				84BC87B01F2F287E0005068B /* AreaScene.swift in Sources */,
+				84264E531F419B3F005CB3C7 /* ExtraScene.swift in Sources */,
 				84C575B81F2B047D00A351BA /* ShowPickerView.swift in Sources */,
 				842E22F21ED3DCE700FD0F4B /* LoginScene.swift in Sources */,
 				8430FFAC1F2047DC00EACEF4 /* ShowTableview.swift in Sources */,
 				846B41431F25DFE00026CFD2 /* RegisterScene.swift in Sources */,
 				84BC87B21F2F6C920005068B /* FriendsScene.swift in Sources */,
 				8430FFA81F2047C700EACEF4 /* Position.swift in Sources */,
+				84AEE2A01F3D56A300DA4900 /* CreateScene_Camera.swift in Sources */,
 				84BC87AE1F2EDACE0005068B /* CreateScene.swift in Sources */,
 				84308FD31F346E1800AFBA7F /* ProfileScene.swift in Sources */,
 				842E22F41ED3DCE700FD0F4B /* GameViewController.swift in Sources */,

@@ -27,7 +27,7 @@ class ScoresScene: SKScene {
     var totalPress : UIButton!
     var createdPress : UIButton!
     var solvedPress : UIButton!
-    
+    var returnPress: UIButton!
     override func didMove(to view: SKView) {
         sView = self.view
         

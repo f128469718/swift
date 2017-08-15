@@ -121,7 +121,7 @@ class LoginScene: SKScene {
                 //print("emptyString:\(emptyString)")
                 
                 
-                if (emptyString.value == "true"){
+                if (emptyString.value5 == "true"){
                     account = emailtextfield.text
                     composer.NextScene(nextScene: MainMenuScene(size: self.size),view: &sView!)
                     email.removeFromSuperview()
