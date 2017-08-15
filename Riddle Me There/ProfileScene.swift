@@ -12,12 +12,13 @@ import SpriteKit
 import GameplayKit
 import UIKit
 
-var EditProfileButton : UIButton!
-var photo : UIButton!
+
 
 class ProfileScene: SKScene {
     var sView : SKView?
-    
+    var EditProfileButton : UIButton!
+    var photo : UIButton!
+    var returnPress1 : UIButton!
     
     override func didMove(to view: SKView) {
         sView = self.view
