@@ -12,11 +12,11 @@ import UIKit
 import SpriteKit
 
 struct Country {
-    let name: Array<String>
-    let chname: Array<String>
-    let abbname: Array<String>
+    let value1: Array<String>
+    let value2: Array<String>
+    let value3: Array<String>
     let value4 : Array<String>
-    let value: String
+    let value5: String
 }
 
 

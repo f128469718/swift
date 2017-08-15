@@ -206,7 +206,7 @@ class RegisterScene: SKScene {
         
         emptyString = DatabasePost().postDatabase(URL: "http://140.131.12.56/swift/register.php", valuedata: data, method: 2)
         
-        if emptyString.value == "correct" {
+        if emptyString.value5 == "correct" {
             print("success");
         }
     }
@@ -235,7 +235,7 @@ class RegisterScene: SKScene {
         
         //myViewController.ArrayInit()
         
-        myViewController.country = countrydata.abbname
+        myViewController.country = countrydata.value3
         
         sView?.addSubview(myPickerView)
         myPickerView.delegate = myViewController

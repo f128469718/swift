@@ -48,7 +48,7 @@ class DatabasePost {
                                     names.append(name)
                                     chnames.append(chname)
                                     abbnames.append(abbname)
-                                    let user = Country(name: names, chname: chnames, abbname: abbnames, value4: arrayvalue4, value: "")
+                                    let user = Country(value1: names, value2: chnames, value3: abbnames, value4: arrayvalue4, value5: "")
                                     stringValue = user
                                 }
                             }
@@ -64,8 +64,9 @@ class DatabasePost {
                                         chnames.append(riddle)
                                         abbnames.append(riddlelike)
                                         arrayvalue4.append(riddledislike)
-                                        let user = Country(name: names, chname: chnames, abbname: abbnames, value4: arrayvalue4, value: "")
+                                        let user = Country(value1: names, value2: chnames, value3: abbnames, value4: arrayvalue4, value5:"")
                                         stringValue = user
+                                        
                                     }
                                 }
                             }
@@ -96,7 +97,7 @@ class DatabasePost {
                     print("stringData : \(stringData)") //JSONSerialization
                     //self.splitedArray = stringData.components(separatedBy:",")
                     //print("splitedArray : \(self.splitedArray)")
-                    let user = Country(name: names, chname: chnames, abbname: abbnames, value4: arrayvalue4, value: stringData)
+                    let user = Country(value1: names, value2: chnames, value3: abbnames, value4: arrayvalue4, value5: stringData)
                     stringValue = user
                 }
             }
