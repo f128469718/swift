@@ -63,8 +63,8 @@ class GameViewController: UIViewController {
             print(currentLocation.coordinate.longitude)
         }
 
-
         let scene = ExtraScene(size:CGSize(width: 480, height: 320))
+
 
 
         let skView = self.view as! SKView
