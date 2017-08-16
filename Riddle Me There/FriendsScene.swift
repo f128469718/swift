@@ -20,7 +20,7 @@ class FriendsScene: SKScene {
     var invitefriendsbutton : UIButton!
     var ConfirmFriendsbutton : UIButton!
     var Messagesbutton :UIButton!
-    var gameTableView = ShowTableview()
+    var gameTableView = ShowTableview2()
     
     override func didMove(to view: SKView) {
         sView = self.view
@@ -54,17 +54,12 @@ class FriendsScene: SKScene {
         
         //tableview
         var data = "email=andy@gmail.com"
-        emptyString = DatabasePost().postDatabase(URL: "http://140.131.12.56/swift/searchfriends.php", valuedata: data, method: 3)
+        emptyString = DatabasePost().postDatabase(URL: "http://140.131.12.56/swift/searchfriends.php", valuedata: data, method: 4)
         gameTableView.sView = sView!
-        gameTableView.vWidth = (sView?.bounds.width)!
-        gameTableView.vHeight = (sView?.bounds.height)!
-        print(emptyString.value1)
-        gameTableView.title = "Riddle"
+        gameTableView.title = "Friends"
         
         gameTableView.items = emptyString.value1
-        gameTableView.items2 = emptyString.value2
-        gameTableView.items3 = emptyString.value3
-        gameTableView.items4 = emptyString.value4
+        
         gameTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         gameTableView.frame=CGRect(x:20,y:50,width:280,height:200)
         gameTableView.backgroundColor = UIColor.clear
@@ -99,6 +94,7 @@ class FriendsScene: SKScene {
         
         pos.autoPosition(item1: returnbtn, item2: self.view!, topValue: view.bounds.height * 0.84, bottomValue: -(view.bounds.height * 0.16), leftValue: view.bounds.width * 0.08, rightValue: -(view.bounds.width * 0.92), widthValue: 0.14, heightValue: 0.19)
         
+        pos.autoPosition(item1: gameTableView, item2: sView!, topValue: view.bounds.height * 0.1, bottomValue: -(view.bounds.height * 0.9), leftValue: view.bounds.width * 0.26, rightValue: -(view.bounds.width * 0.74), widthValue: 0.4, heightValue: 0.8)
         
         
         

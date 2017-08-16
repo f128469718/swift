@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SpriteKit
 
 class ShowTableview: UITableView,UITableViewDelegate,UITableViewDataSource {
     var title = ""
@@ -145,5 +146,118 @@ class ShowTableview: UITableView,UITableViewDelegate,UITableViewDataSource {
     
 }
 
-
+class ShowTableview2: UITableView,UITableViewDelegate,UITableViewDataSource {
+    var title = ""
+    var items: [String] = ["Player1", "Player2", "Player3"]
+    var items2: [String] = ["Player1", "Player2", "Player3"]
+    
+   
+    var sView = UIView()
+    
+    
+    override init(frame: CGRect, style: UITableViewStyle) {
+        super.init(frame: frame, style: style)
+        
+        
+        self.delegate = self
+        self.dataSource = self
+        
+        
+        
+        
+    }
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Table view data source
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    //欄位數
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return items.count
+    }
+    
+    //設定欄位高度
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 70.0;//Choose your custom row height
+    }
+    
+    //欄位的內容
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
+        let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell")! as UITableViewCell
+        
+        //欄位背景透明化
+        cell.backgroundColor = UIColor.clear
+        
+        //原本預設numberOfLines = 1 , 0可以設定無限行數
+        cell.textLabel?.numberOfLines = 0
+        
+        //將陣列面的值插入到tableview的欄位裡
+        cell.textLabel?.text = "Name : \(self.items[indexPath.row])"
+        cell.textLabel?.textAlignment = .justified
+        //cell.textLabel?.frame = CGRect(x: 100, y: 30, width: 200, height: 50)
+        
+        //欄位前面的圖片
+        var imageName = UIImage(named: "Select button icon")
+        cell.imageView?.image = imageName
+        
+        //cell.layer.backgroundColor = UIColor.clear.cgColor
+        //cell.contentView.backgroundColor = UIColor.clear
+        
+        return cell
+    }
+    
+    
+    
+    //標題欄位
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
+        return title
+    }
+    
+    //選擇到的欄位
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("You selected cell #\(indexPath.row)!")
+        
+        deleteAlert()
+        
+        
+        
+    }
+    
+    func deleteAlert(){
+        // 建立一個提示框
+        let alertController = UIAlertController(
+            title: "刪除好友",
+            message: "確認要刪除了嗎？",
+            preferredStyle: .alert)
+        
+        // 建立[取消]按鈕
+        let cancelAction = UIAlertAction(
+            title: "取消",
+            style: .cancel,
+            handler: nil)
+        alertController.addAction(cancelAction)
+        
+        // 建立[刪除]按鈕
+        let okAction = UIAlertAction(
+            title: "刪除",
+            style: .default,
+            handler:  {(alert: UIAlertAction!) in self.abc()})
+        alertController.addAction(okAction)
+        
+        // 顯示提示框
+        sView.window?.rootViewController?.present(alertController, animated: true)
+    }
+    
+    func abc() {
+        
+    }
+}
 
