@@ -100,6 +100,20 @@ class FriendsScene: SKScene {
         
     }
     
+    override func update(_ currentTime: TimeInterval) {
+        if (gameTableView.value == "true") {
+            print("update")
+            //tableview
+            var data = "email=andy@gmail.com"
+            emptyString = DatabasePost().postDatabase(URL: "http://140.131.12.56/swift/searchfriends.php", valuedata: data, method: 4)
+            
+            gameTableView.items = emptyString.value1
+            gameTableView.reloadData()
+            gameTableView.value = ""
+            
+        }
+    }
+    
     // invite friends button event
     @objc func invitefriendsbtnevent(sender:UIButton){
         

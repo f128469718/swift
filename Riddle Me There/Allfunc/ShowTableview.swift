@@ -150,7 +150,7 @@ class ShowTableview2: UITableView,UITableViewDelegate,UITableViewDataSource {
     var title = ""
     var items: [String] = ["Player1", "Player2", "Player3"]
     var items2: [String] = ["Player1", "Player2", "Player3"]
-    
+    var value = ""
    
     var sView = UIView()
     
@@ -225,13 +225,13 @@ class ShowTableview2: UITableView,UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You selected cell #\(indexPath.row)!")
         
-        deleteAlert()
+        deleteAlert(name: self.items[indexPath.row])
         
         
         
     }
     
-    func deleteAlert(){
+    func deleteAlert(name:String){
         // 建立一個提示框
         let alertController = UIAlertController(
             title: "刪除好友",
@@ -249,14 +249,17 @@ class ShowTableview2: UITableView,UITableViewDelegate,UITableViewDataSource {
         let okAction = UIAlertAction(
             title: "刪除",
             style: .default,
-            handler:  {(alert: UIAlertAction!) in self.abc()})
+            handler:  {(alert: UIAlertAction!) in self.abc(name:name)})
         alertController.addAction(okAction)
         
         // 顯示提示框
         sView.window?.rootViewController?.present(alertController, animated: true)
     }
     
-    func abc() {
+    func abc(name:String) {
+        var data = "email=andy@gmail.com&friendname=\(name)"
+        emptyString = DatabasePost().postDatabase(URL: "http://140.131.12.56/swift/deletefriends.php", valuedata: data, method: 2)
+        value = emptyString.value5
         
     }
 }
