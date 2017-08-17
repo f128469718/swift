@@ -14,12 +14,14 @@ import UIKit
 
 
 
-class ProfileScene: SKScene {
+class ProfileScene: SKScene,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     var sView : SKView?
     var EditProfilebtn : UIButton!
     var photobtn : UIButton!
     var returnPressbtn : UIButton!
-    
+    var photoimage : UIImage!
+    var newImage : SKSpriteNode!
+    var semaphore : DispatchSemaphore!
     override func didMove(to view: SKView) {
         sView = self.view
         
@@ -51,49 +53,49 @@ class ProfileScene: SKScene {
         
         // name label
         let namelabel = SKLabelNode(text: emptyString.value1[0])
-        namelabel.position = CGPoint(x: (sView?.bounds.width)! * 0.25, y: (sView?.bounds.height)! * 0.8)
+        namelabel.position = CGPoint(x: size.width / 3.2, y: size.width / 1.85)
         namelabel.fontSize = 20
         namelabel.fontColor = .black
         
         
         // age label
         let agelabel = SKLabelNode(text: emptyString.value1[2])
-        agelabel.position = CGPoint(x: (sView?.bounds.width)! * 0.3, y: (sView?.bounds.height)! * 0.71)
+        agelabel.position = CGPoint(x: size.width / 2.8, y: size.width / 2.1)
         agelabel.fontSize = 20
         agelabel.fontColor = .black
         
         
         // gender label
         let genderlabel = SKLabelNode(text: emptyString.value1[3])
-        genderlabel.position = CGPoint(x: (sView?.bounds.width)! * 0.25, y: (sView?.bounds.height)! * 0.6)
+        genderlabel.position = CGPoint(x: size.width / 3.2, y: size.width / 2.5)
         genderlabel.fontSize = 20
         genderlabel.fontColor = .black
         
         
         // email label
         let emaillabel = SKLabelNode(text: "andy@gmail.com")
-        emaillabel.position = CGPoint(x: (sView?.bounds.width)! * 0.45, y: (sView?.bounds.height)! * 0.33)
+        emaillabel.position = CGPoint(x: size.width / 1.8, y: size.width / 4.5)
         emaillabel.fontSize = 20
         emaillabel.fontColor = .black
         
         
         // country label
         let countrylabel = SKLabelNode(text: emptyString.value1[1])
-        countrylabel.position = CGPoint(x: (sView?.bounds.width)! * 0.5, y: (sView?.bounds.height)! * 0.25)
+        countrylabel.position = CGPoint(x: size.width / 1.5, y: size.width / 5.9)
         countrylabel.fontSize = 20
         countrylabel.fontColor = .black
         
         
         // solve riddle label
         let solveriddlelabel = SKLabelNode(text: emptyString.value1[4])
-        solveriddlelabel.position = CGPoint(x: (sView?.bounds.width)! * 0.5, y: (sView?.bounds.height)! * 0.18)
+        solveriddlelabel.position = CGPoint(x: size.width / 1.5, y: size.width / 8)
         solveriddlelabel.fontSize = 20
         solveriddlelabel.fontColor = .black
         
         
         // create riddle label
         let createriddlelabel = SKLabelNode(text: emptyString.value1[5])
-        createriddlelabel.position = CGPoint(x: (sView?.bounds.width)! * 0.5, y: (sView?.bounds.height)! * 0.11)
+        createriddlelabel.position = CGPoint(x: size.width / 1.5, y: size.width / 13)
         createriddlelabel.fontSize = 20
         createriddlelabel.fontColor = .black
         
@@ -141,6 +143,22 @@ class ProfileScene: SKScene {
         
         pos.autoPosition(item1: returnPressbtn, item2: self.view!, topValue: view.bounds.height * 0.84, bottomValue: -(view.bounds.height * 0.16), leftValue: view.bounds.width * 0.04, rightValue: -(view.bounds.width * 0.96), widthValue: 0.14, heightValue: 0.19)
         
+        
+       let phimage =  DataFile().read()
+        if phimage != nil{
+            let tex:SKTexture = SKTexture(image: phimage)
+            newImage = SKSpriteNode(texture: tex)
+            
+            newImage.name = "cameraRollPicture"
+            
+            newImage.position = CGPoint(x: size.width / 1.65, y: size.height / 1.35)
+            newImage.size = CGSize(width: size.width * 0.18, height: size.height * 0.28)
+            
+            
+            self.addChild(newImage)
+            photobtn.removeFromSuperview()
+        }
+        
     }
     
     // Edit Profile button event
@@ -155,7 +173,39 @@ class ProfileScene: SKScene {
     
     // photo button event
     @objc func photobtnevent(sender:UIButton){
-        
+       
+       ChoosePhotoAlert()
+       
+      
     }
+    
+    
+    // Choose Photo Alert
+    func ChoosePhotoAlert(){
+        // 建立一個提示框
+        let alertController = UIAlertController(
+        title: "選擇照片",
+        message: "請選擇照片方式",
+        preferredStyle: .alert)
+        
+        // 建立[取消]按鈕
+        let cameraAction = UIAlertAction(
+            title: "相機",
+        style: .cancel,
+        handler: {(alert: UIAlertAction!) in self.getPhotoFromSource(source: UIImagePickerControllerSourceType.camera)})
+        alertController.addAction(cameraAction)
+        
+        // 建立[刪除]按鈕
+        let photoAction = UIAlertAction(
+        title: "相片庫",
+        style: .default,
+        handler:  {(alert: UIAlertAction!) in self.getPhotoFromSource(source: UIImagePickerControllerSourceType.photoLibrary)})
+        alertController.addAction(photoAction)
+        
+        // 顯示提示框
+        sView?.window?.rootViewController?.present(alertController, animated: true)
+    }
+    
+    
     
 }

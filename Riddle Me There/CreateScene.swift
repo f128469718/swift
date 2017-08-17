@@ -9,13 +9,13 @@ import SpriteKit
 import GameplayKit
 import UIKit
 
-var submitbutton : UIButton!
-var titlefield : UITextField!
-var riddlefield : UITextView!
-var camerabutton : UIButton!
+
 
 class CreateScene: SKScene,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     var sView : SKView?
+    var submitbutton : UIButton!
+    var titlefield : UITextField!
+    var riddlefield : UITextView!
     var camerabutton : UIButton!
     var maskingCameraRollchoice:Bool = false
     var newImage : SKSpriteNode!
