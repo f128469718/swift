@@ -9,18 +9,22 @@ import SpriteKit
 import GameplayKit
 import UIKit
 
-var submitbutton : UIButton!
-var titlefield : UITextField!
-var riddlefield : UITextView!
-var camerabutton : UIButton!
+
 
 class CreateScene: SKScene,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     var sView : SKView?
+    
     var camerabutton : UIButton!
     var maskingCameraRollchoice:Bool = false
     var newImage : SKSpriteNode!
     var Riddlepic : UIImage!
-    override func didMove(to view: SKView) {
+    var submitbutton : UIButton!
+    var titlefield : UITextField!
+    var riddlefield : UITextView!
+    var returnPress : UIButton!
+
+    
+      override func didMove(to view: SKView) {
         sView = self.view
 
         let background = pos.imageclass(image: "Background-5", x: size.width/2, y: size.height/2,z:-1)
@@ -37,9 +41,13 @@ class CreateScene: SKScene,UIImagePickerControllerDelegate,UINavigationControlle
        
         camerabutton = camerabtn()
         
+        returnPress = UIButton(frame:CGRect(x: 40, y: 270, width: 75, height: 70))
+        returnPress.setBackgroundImage(UIImage(named: "returnPress"), for: UIControlState.normal)
+        returnPress.addTarget(self,action: #selector(returnbtnevent),for: .touchUpInside)//修改按鈕細節
+        
    
 
-   
+        view.addSubview(returnPress)
         view.addSubview(camerabutton)
         view.addSubview(titlefield)
         view.addSubview(riddlefield)
@@ -52,13 +60,13 @@ class CreateScene: SKScene,UIImagePickerControllerDelegate,UINavigationControlle
     
         submitbutton.translatesAutoresizingMaskIntoConstraints = false
         camerabutton.translatesAutoresizingMaskIntoConstraints = false
+        returnPress.translatesAutoresizingMaskIntoConstraints = false
         
         pos.autoPosition(item1: submitbutton, item2: self.view!, topValue: view.bounds.height * 0.75, bottomValue: -(view.bounds.height * 0.25), leftValue: view.bounds.width * 0.01, rightValue: -(view.bounds.width * 0.99), widthValue: 0.4, heightValue: 0.3)
         
         pos.autoPosition(item1: camerabutton, item2: self.view!, topValue: view.bounds.height * 0.64, bottomValue: -(view.bounds.height * 0.36), leftValue: view.bounds.width * 0.57, rightValue: -(view.bounds.width * 0.43), widthValue: 0.08, heightValue: 0.12)
         
-        
-        
+        pos.autoPosition(item1: returnPress, item2: self.view!, topValue: view.bounds.height * 0.85, bottomValue: -(view.bounds.height * 0.15), leftValue: view.bounds.width * 0.85, rightValue: -(view.bounds.width * 0.15), widthValue: 0.13, heightValue: 0.2)
     }
     
     // submit button event
@@ -74,7 +82,7 @@ class CreateScene: SKScene,UIImagePickerControllerDelegate,UINavigationControlle
         submitbutton.removeFromSuperview()
         titlefield.removeFromSuperview()
         riddlefield.removeFromSuperview()
-
+        returnPress.removeFromSuperview()
     }
     
     // camera button event
@@ -91,6 +99,13 @@ class CreateScene: SKScene,UIImagePickerControllerDelegate,UINavigationControlle
         btn.addTarget(self,action: #selector(camerabuttonevent),for: .touchUpInside)//修改按鈕細節
         return btn
     }
-    
+    @objc func returnbtnevent() {
+        composer.NextScene(nextScene: MenuScene(size: self.size), view: &sView!)
+        camerabutton.removeFromSuperview()
+        submitbutton.removeFromSuperview()
+        titlefield.removeFromSuperview()
+        riddlefield.removeFromSuperview()
+        returnPress.removeFromSuperview()
+    }
     
 }

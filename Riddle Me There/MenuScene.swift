@@ -112,44 +112,94 @@ class MenuScene: SKScene {
         if (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedWhenInUse ||
             CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedAlways){
             currentLocation = locManager.location
-            print("latitude :\(currentLocation.coordinate.latitude)")
+           print("latitude :\(currentLocation.coordinate.latitude)")
             print("longitude :\(currentLocation.coordinate.longitude)")
         }
     }
     
     // solve button event
     @objc func solvebtnevent(sender:UIButton){
-        
+        composer.NextScene(nextScene: SolveScene(size: self.size),view: &sView!)
+        solvebtn.removeFromSuperview()
+        createbtn.removeFromSuperview()
+        areabtn.removeFromSuperview()
+        friendbtn.removeFromSuperview()
+        profilebtn.removeFromSuperview()
+        scorebtn.removeFromSuperview()
+        extrabtn.removeFromSuperview()
     }
     
     // create button event
     @objc func createbtnevent(sender:UIButton){
-        
+        composer.NextScene(nextScene: CreateScene(size: self.size),view: &sView!)
+        solvebtn.removeFromSuperview()
+        createbtn.removeFromSuperview()
+        areabtn.removeFromSuperview()
+        friendbtn.removeFromSuperview()
+        profilebtn.removeFromSuperview()
+        scorebtn.removeFromSuperview()
+        extrabtn.removeFromSuperview()
     }
     
     // area button event
     @objc func areabtnevent(sender:UIButton){
-        
+        composer.NextScene(nextScene: AreaScene(size: self.size),view: &sView!)
+        solvebtn.removeFromSuperview()
+        createbtn.removeFromSuperview()
+        areabtn.removeFromSuperview()
+        friendbtn.removeFromSuperview()
+        profilebtn.removeFromSuperview()
+        scorebtn.removeFromSuperview()
+        extrabtn.removeFromSuperview()
     }
     
     // friend button event
     @objc func friendbtnevent(sender:UIButton){
-        
+        composer.NextScene(nextScene: FriendsScene(size: self.size),view: &sView!)
+        solvebtn.removeFromSuperview()
+        createbtn.removeFromSuperview()
+        areabtn.removeFromSuperview()
+        friendbtn.removeFromSuperview()
+        profilebtn.removeFromSuperview()
+        scorebtn.removeFromSuperview()
+        extrabtn.removeFromSuperview()
     }
     
     // profile button event
     @objc func profilebtnevent(sender:UIButton){
-        
+        composer.NextScene(nextScene: ProfileScene(size: self.size),view: &sView!)
+        solvebtn.removeFromSuperview()
+        createbtn.removeFromSuperview()
+        areabtn.removeFromSuperview()
+        friendbtn.removeFromSuperview()
+        profilebtn.removeFromSuperview()
+        scorebtn.removeFromSuperview()
+        extrabtn.removeFromSuperview()
     }
     
     // score button event
     @objc func scorebtnevent(sender:UIButton){
+        composer.NextScene(nextScene: ScoresScene(size: self.size),view: &sView!)
         
+         solvebtn.removeFromSuperview()
+         createbtn.removeFromSuperview()
+         areabtn.removeFromSuperview()
+         friendbtn.removeFromSuperview()
+         profilebtn.removeFromSuperview()
+         scorebtn.removeFromSuperview()
+         extrabtn.removeFromSuperview()
     }
     
     // extra button event
     @objc func extrabtnevent(sender:UIButton){
-        
+        composer.NextScene(nextScene: ExtraScene(size: self.size),view: &sView!)
+        solvebtn.removeFromSuperview()
+        createbtn.removeFromSuperview()
+        areabtn.removeFromSuperview()
+        friendbtn.removeFromSuperview()
+        profilebtn.removeFromSuperview()
+        scorebtn.removeFromSuperview()
+        extrabtn.removeFromSuperview()
     }
     
     
