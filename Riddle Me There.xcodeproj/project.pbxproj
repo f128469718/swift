@@ -26,6 +26,9 @@
 		845002451F2AD16100A70FD6 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845002441F2AD16100A70FD6 /* MenuScene.swift */; };
 		84536D241F453EAD0056DD10 /* LocalScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84536D231F453EAD0056DD10 /* LocalScene.swift */; };
 		8457F8F81F39A2AA00753C15 /* ScoresScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457F8F71F39A2AA00753C15 /* ScoresScene.swift */; };
+		8461495F1F42CFCC003B7B12 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8461495E1F42CFCC003B7B12 /* Alertable.swift */; };
+		846B37C31F452E0D0001672F /* ProfileScene_Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B37C21F452E0C0001672F /* ProfileScene_Camera.swift */; };
+		846B37C51F453CBE0001672F /* DataFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B37C41F453CBE0001672F /* DataFile.swift */; };
 		846B41431F25DFE00026CFD2 /* RegisterScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B41421F25DFE00026CFD2 /* RegisterScene.swift */; };
 		849C32531F29B6D7002A32D6 /* ShowPickerViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C32521F29B6D7002A32D6 /* ShowPickerViewUI.swift */; };
 		84AEE2A01F3D56A300DA4900 /* CreateScene_Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AEE29F1F3D56A300DA4900 /* CreateScene_Camera.swift */; };
@@ -79,6 +82,9 @@
 		845002441F2AD16100A70FD6 /* MenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
 		84536D231F453EAD0056DD10 /* LocalScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalScene.swift; sourceTree = "<group>"; };
 		8457F8F71F39A2AA00753C15 /* ScoresScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresScene.swift; sourceTree = "<group>"; };
+		8461495E1F42CFCC003B7B12 /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
+		846B37C21F452E0C0001672F /* ProfileScene_Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScene_Camera.swift; sourceTree = "<group>"; };
+		846B37C41F453CBE0001672F /* DataFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFile.swift; sourceTree = "<group>"; };
 		846B41421F25DFE00026CFD2 /* RegisterScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScene.swift; sourceTree = "<group>"; };
 		849C32521F29B6D7002A32D6 /* ShowPickerViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPickerViewUI.swift; sourceTree = "<group>"; };
 		84AEE29F1F3D56A300DA4900 /* CreateScene_Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateScene_Camera.swift; sourceTree = "<group>"; };
@@ -126,6 +132,9 @@
 				84EA9DB91F0C927A0011587C /* Composer.swift */,
 				849C32521F29B6D7002A32D6 /* ShowPickerViewUI.swift */,
 				84AEE29F1F3D56A300DA4900 /* CreateScene_Camera.swift */,
+				8461495E1F42CFCC003B7B12 /* Alertable.swift */,
+				846B37C21F452E0C0001672F /* ProfileScene_Camera.swift */,
+				846B37C41F453CBE0001672F /* DataFile.swift */,
 			);
 			path = Allfunc;
 			sourceTree = "<group>";
@@ -160,8 +169,8 @@
 				842E22FD1ED3DCE700FD0F4B /* Info.plist */,
 				84536D251F4543E70056DD10 /* Area */,
 				84BC87AD1F2EDACE0005068B /* CreateScene.swift */,
-				84264E521F419B3F005CB3C7 /* ExtraScene.swift */,
 				84BC87B11F2F6C920005068B /* FriendsScene.swift */,
+				84264E521F419B3F005CB3C7 /* ExtraScene.swift */,
 				842E22F11ED3DCE700FD0F4B /* LoginScene.swift */,
 				842E231F1ED3E1F200FD0F4B /* MainMenuScene.swift */,
 				845002441F2AD16100A70FD6 /* MenuScene.swift */,
@@ -344,6 +353,7 @@
 				84EA9DBA1F0C927A0011587C /* Composer.swift in Sources */,
 				84BC87B01F2F287E0005068B /* AreaScene.swift in Sources */,
 				84264E531F419B3F005CB3C7 /* ExtraScene.swift in Sources */,
+				846B37C31F452E0D0001672F /* ProfileScene_Camera.swift in Sources */,
 				84C575B81F2B047D00A351BA /* ShowPickerView.swift in Sources */,
 				842E22F21ED3DCE700FD0F4B /* LoginScene.swift in Sources */,
 				8430FFAC1F2047DC00EACEF4 /* ShowTableview.swift in Sources */,
@@ -357,7 +367,9 @@
 				842E22F41ED3DCE700FD0F4B /* GameViewController.swift in Sources */,
 				8430BD2F1F46BC820002794F /* SpecialScene.swift in Sources */,
 				8457F8F81F39A2AA00753C15 /* ScoresScene.swift in Sources */,
+				846B37C51F453CBE0001672F /* DataFile.swift in Sources */,
 				842E23201ED3E1F200FD0F4B /* MainMenuScene.swift in Sources */,
+				8461495F1F42CFCC003B7B12 /* Alertable.swift in Sources */,
 				842E22EC1ED3DCE700FD0F4B /* AppDelegate.swift in Sources */,
 				84374A8D1F3C127B00718281 /* SolveScene.swift in Sources */,
 				845002451F2AD16100A70FD6 /* MenuScene.swift in Sources */,

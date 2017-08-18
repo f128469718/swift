@@ -62,7 +62,9 @@ class GameViewController: UIViewController {
       print(currentLocation.coordinate.latitude)
       print(currentLocation.coordinate.longitude,"123")
         }
+
         let scene = SpecialScene(size:CGSize(width: 480, height: 320))
+
         
         let skView = self.view as! SKView
         skView.showsFPS = true

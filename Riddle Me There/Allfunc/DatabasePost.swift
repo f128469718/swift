@@ -18,6 +18,8 @@ class DatabasePost {
         var chnames = [String]()
         var abbnames = [String]()
         var arrayvalue4 = [String]()
+        var arrayvalue5 = [String]()
+        var arrayvalue6 = [String]()
         var values = ""
         let request = NSMutableURLRequest(url: NSURL(string: URL)! as URL)
         /*let request = NSMutableURLRequest(url: NSURL(string: "http://140.131.12.56/test.php")! as URL)*/
@@ -72,16 +74,21 @@ class DatabasePost {
                             }
                         }
                     }
+                }else if (method == 4){
+                    for jsons in json!! {
+                        if let value = jsons["value"] as? String {
+                            
+                            names.append(value)
+                           
+                            let user = Country(value1: names, value2: chnames, value3: abbnames, value4: arrayvalue4, value5:"")
+                            stringValue = user
+                                        
+                            
+                        }
+                    }
                 }
                 
-                /*for jsons in json!! {
-                 if let name = jsons[1] as? String {
-                 names.append(name)
-                 let user = Country.init(name: names, chname: chnames, abbname: abbnames)
-                 stringValue = user
-                 
-                 }
-                 }*/
+               
             }
             
             
