@@ -113,7 +113,7 @@ class MenuScene: SKScene {
         if (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedWhenInUse ||
             CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedAlways){
             currentLocation = locManager.location
-            print("latitude :\(currentLocation.coordinate.latitude)")
+           print("latitude :\(currentLocation.coordinate.latitude)")
             print("longitude :\(currentLocation.coordinate.longitude)")
         }
     }
@@ -121,7 +121,10 @@ class MenuScene: SKScene {
     // solve button event
     @objc func solvebtnevent(sender:UIButton){
         composer.NextScene(nextScene: SolveScene(size: self.size),view: &sView!)
+<<<<<<< HEAD
     
+=======
+>>>>>>> 05c0fbb4c78064bff04d37b066898d956ff69f95
         solvebtn.removeFromSuperview()
         createbtn.removeFromSuperview()
         areabtn.removeFromSuperview()
@@ -134,7 +137,10 @@ class MenuScene: SKScene {
     // create button event
     @objc func createbtnevent(sender:UIButton){
         composer.NextScene(nextScene: CreateScene(size: self.size),view: &sView!)
+<<<<<<< HEAD
         
+=======
+>>>>>>> 05c0fbb4c78064bff04d37b066898d956ff69f95
         solvebtn.removeFromSuperview()
         createbtn.removeFromSuperview()
         areabtn.removeFromSuperview()
@@ -147,7 +153,10 @@ class MenuScene: SKScene {
     // area button event
     @objc func areabtnevent(sender:UIButton){
         composer.NextScene(nextScene: AreaScene(size: self.size),view: &sView!)
+<<<<<<< HEAD
         
+=======
+>>>>>>> 05c0fbb4c78064bff04d37b066898d956ff69f95
         solvebtn.removeFromSuperview()
         createbtn.removeFromSuperview()
         areabtn.removeFromSuperview()
@@ -159,8 +168,12 @@ class MenuScene: SKScene {
     
     // friend button event
     @objc func friendbtnevent(sender:UIButton){
+<<<<<<< HEAD
         composer.NextScene(nextScene: FailScene(size: self.size),view: &sView!)
         
+=======
+        composer.NextScene(nextScene: FriendsScene(size: self.size),view: &sView!)
+>>>>>>> 05c0fbb4c78064bff04d37b066898d956ff69f95
         solvebtn.removeFromSuperview()
         createbtn.removeFromSuperview()
         areabtn.removeFromSuperview()
@@ -173,7 +186,10 @@ class MenuScene: SKScene {
     // profile button event
     @objc func profilebtnevent(sender:UIButton){
         composer.NextScene(nextScene: ProfileScene(size: self.size),view: &sView!)
+<<<<<<< HEAD
         
+=======
+>>>>>>> 05c0fbb4c78064bff04d37b066898d956ff69f95
         solvebtn.removeFromSuperview()
         createbtn.removeFromSuperview()
         areabtn.removeFromSuperview()
@@ -187,6 +203,7 @@ class MenuScene: SKScene {
     @objc func scorebtnevent(sender:UIButton){
         composer.NextScene(nextScene: ScoresScene(size: self.size),view: &sView!)
         
+<<<<<<< HEAD
         solvebtn.removeFromSuperview()
         createbtn.removeFromSuperview()
         areabtn.removeFromSuperview()
@@ -194,12 +211,24 @@ class MenuScene: SKScene {
         profilebtn.removeFromSuperview()
         scorebtn.removeFromSuperview()
         extrabtn.removeFromSuperview()
+=======
+         solvebtn.removeFromSuperview()
+         createbtn.removeFromSuperview()
+         areabtn.removeFromSuperview()
+         friendbtn.removeFromSuperview()
+         profilebtn.removeFromSuperview()
+         scorebtn.removeFromSuperview()
+         extrabtn.removeFromSuperview()
+>>>>>>> 05c0fbb4c78064bff04d37b066898d956ff69f95
     }
     
     // extra button event
     @objc func extrabtnevent(sender:UIButton){
         composer.NextScene(nextScene: ExtraScene(size: self.size),view: &sView!)
+<<<<<<< HEAD
         
+=======
+>>>>>>> 05c0fbb4c78064bff04d37b066898d956ff69f95
         solvebtn.removeFromSuperview()
         createbtn.removeFromSuperview()
         areabtn.removeFromSuperview()

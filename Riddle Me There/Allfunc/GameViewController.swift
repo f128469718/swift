@@ -59,10 +59,16 @@ class GameViewController: UIViewController {
         if (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedWhenInUse ||
             CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedAlways){
             currentLocation = locManager.location
-            print(currentLocation.coordinate.latitude)
-            print(currentLocation.coordinate.longitude)
+      print(currentLocation.coordinate.latitude)
+      print(currentLocation.coordinate.longitude,"123")
         }
+<<<<<<< HEAD
         let scene = MainMenuScene(size:CGSize(width: 480, height: 320))
+=======
+
+        let scene = SpecialScene(size:CGSize(width: 480, height: 320))
+
+>>>>>>> 05c0fbb4c78064bff04d37b066898d956ff69f95
         
         let skView = self.view as! SKView
         skView.showsFPS = true
