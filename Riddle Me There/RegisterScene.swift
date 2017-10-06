@@ -32,6 +32,9 @@ class RegisterScene: SKScene {
     var myPickerView: UIPickerView!
     var selectoption: Int!
     var gendervalue: String!
+    var countrydata = [CountryData]()
+    var userdata = [UserData]()
+    var userdataresponse = [UserDataResponse]()
     
     override func didMove(to view: SKView){
         sView = self.view
@@ -202,11 +205,30 @@ class RegisterScene: SKScene {
     }
     
     @objc func clickButton2(sender:UIButton){
-        var data = "firstname=\(firstnametextfield.text!)&lastname=\(lastnametextfield.text!)&username=\(usernametextfield.text!)&email=\(emailtextfield.text!)&password=\(pwdtextfield.text!)&country=\(countrytextfield.text!)&age=\(agetextfield.text!)&gender=\(gendervalue)"
+       var postvalue = "firstname=\(firstnametextfield.text!)&lastname=\(lastnametextfield.text!)&username=\(usernametextfield.text!)&email=\(emailtextfield.text!)&password=\(pwdtextfield.text!)&country=\(countrytextfield.text!)&age=\(agetextfield.text!)&gender=\(gendervalue)"
         
-        emptyString = DatabasePost().postDatabase(URL: "http://140.131.12.56/swift/register.php", valuedata: data, method: 2)
+        let data = UserData()
+        data.firstname = firstnametextfield.text!
+        data.lastname = lastnametextfield.text!
+        data.username = usernametextfield.text!
+        data.email = emailtextfield.text!
+        data.password = pwdtextfield.text!
+        data.country = countrytextfield.text!
+        data.age = Int(agetextfield.text!)!
+        data.gender = gendervalue
+        self.userdata.append(data)
         
-        if emptyString.value5 == "correct" {
+        let userjson = DatabasePost().postDatabase(URL: "http://140.131.12.56/swift/register.php", valuedata: postvalue)
+        
+        var jsoncount = userjson.count
+        
+        for jsonIndex in 0 ..< jsoncount{
+            var dataresponse = UserDataResponse()
+            dataresponse.response = userjson[jsonIndex]["value"] as! String
+            self.userdataresponse.append(dataresponse)
+        }
+        
+        if self.userdataresponse[0].response == "correct" {
             print("success");
         }
     }
@@ -225,18 +247,28 @@ class RegisterScene: SKScene {
         
     }
     
+    
     @objc func clickButton5(sender:UIButton){
         selectoption = 1
         confirmbtn.isHidden = false
         myPickerView.isHidden = false
         
-        var countrydata = DatabasePost().postDatabase(URL: "http://140.131.12.56/swift/selectcountry.php", valuedata: "", method: 1)
+        var countryjsondata = DatabasePost().postDatabase(URL: "http://140.131.12.56/swift/selectcountry.php", valuedata: "")
+        var jsoncount = countryjsondata.count
         
+        for jsonIndex in 0 ..< jsoncount{
+            var nationdata = CountryData()
+            nationdata.name = countryjsondata[jsonIndex]["name"] as! String
+            nationdata.chname = countryjsondata[jsonIndex]["ch_name"] as! String
+            nationdata.abbname = countryjsondata[jsonIndex]["abb_name"] as! String
+            self.countrydata.append(nationdata)
+        }
         
         //myViewController.ArrayInit()
         
-        myViewController.country = countrydata.value3
-        
+        for index in 0 ..< self.countrydata.count {
+            myViewController.country.append(self.countrydata[index].abbname)
+        }
         sView?.addSubview(myPickerView)
         myPickerView.delegate = myViewController
         myPickerView.dataSource = myViewController

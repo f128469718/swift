@@ -16,17 +16,22 @@ import UIKit
 
 class FriendsScene: SKScene {
     var sView : SKView?
+    
     var returnbtn : UIButton!
     var invitefriendsbutton : UIButton!
     var ConfirmFriendsbutton : UIButton!
     var Messagesbutton :UIButton!
+    
     var gameTableView = ShowTableview2()
+    
+    var friendsData = [FriendsData]()
     
     override func didMove(to view: SKView) {
         sView = self.view
         
         // background image
         let background = pos.imageclass(image: "background-18", x: size.width/2, y: size.height/2,z:-1)
+         background.size = CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
         
         // friends text image
         let friends = pos.imageclass(image: "friends", x: size.width/1.12, y: size.height/1.7,z:0)
@@ -53,12 +58,27 @@ class FriendsScene: SKScene {
         
         
         //tableview
-        var data = "email=andy@gmail.com"
-        emptyString = DatabasePost().postDatabase(URL: "http://140.131.12.56/swift/searchfriends.php", valuedata: data, method: 4)
+        var postdata = "email=\(account)"
+        var friendjson = DatabasePost().postDatabase(URL: "http://140.131.12.56/swift/searchfriends.php", valuedata: postdata)
         gameTableView.sView = sView!
         gameTableView.title = "Friends"
         
-        gameTableView.items = emptyString.value1
+        
+        var jsoncount = friendjson.count
+        
+        for jsonIndex in 0 ..< jsoncount{
+            let fridata = FriendsData()
+            fridata.friends = friendjson[jsonIndex]["friend"] as! String
+            
+            self.friendsData.append(fridata)
+        }
+        
+        
+        for index in 0 ..< self.friendsData.count {
+            gameTableView.items.append(self.friendsData[index].friends)
+        }
+
+        //gameTableView.items = emptyString.value1
         
         gameTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         gameTableView.frame=CGRect(x:20,y:50,width:280,height:200)
@@ -104,10 +124,22 @@ class FriendsScene: SKScene {
         if (gameTableView.value == "true") {
             print("update")
             //tableview
-            var data = "email=andy@gmail.com"
-            emptyString = DatabasePost().postDatabase(URL: "http://140.131.12.56/swift/searchfriends.php", valuedata: data, method: 4)
+            var postdata = "email=andy@gmail.com"
+            let friendjson = DatabasePost().postDatabase(URL: "http://140.131.12.56/swift/searchfriends.php", valuedata: postdata)
             
-            gameTableView.items = emptyString.value1
+            var jsoncount = friendjson.count
+            
+            for jsonIndex in 0 ..< jsoncount{
+                var frienddata = FriendsData()
+                frienddata.friends = friendjson[jsonIndex]["value"] as! String
+                
+                self.friendsData.append(frienddata)
+            }
+            
+            for index in 0 ..< self.friendsData.count {
+                gameTableView.items.append(self.friendsData[index].friends)
+            }
+            
             gameTableView.reloadData()
             gameTableView.value = ""
             

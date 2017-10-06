@@ -22,15 +22,29 @@ class ProfileScene: SKScene,UIImagePickerControllerDelegate,UINavigationControll
     var photoimage : UIImage!
     var newImage : SKSpriteNode!
     var semaphore : DispatchSemaphore!
+    
+    var profileData = [UserDataResponse]()
+    
     override func didMove(to view: SKView) {
         sView = self.view
         
         // connect database get profile information
-        var data = "email=andy@gmail.com"
-        emptyString = DatabasePost().postDatabase(URL: "http://140.131.12.56/swift/searchprofile.php", valuedata: data, method: 4)
-        print("\(emptyString.value1)")
+        var postdata = "email=andy@gmail.com"
+        var profilejson = DatabasePost().postDatabase(URL: "http://140.131.12.56/swift/searchprofile(swift).php", valuedata: postdata)
+        
+        var jsoncount = profilejson.count
+        
+        for jsonIndex in 0 ..< jsoncount{
+            var userdata = UserDataResponse()
+            userdata.response = profilejson[jsonIndex]["response"] as! String
+            self.profileData.append(userdata)
+        }
+        
+        
+        //print("\(emptyString.value1)")
         // background image
         let background = pos.imageclass(image: "background-16", x: size.width/2, y: size.height/2,z:-1)
+         background.size = CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
         
         // profile image
         let Profile = pos.imageclass(image: "Profile", x: size.width/1.1, y: size.height/1.8, z:0)
@@ -52,49 +66,49 @@ class ProfileScene: SKScene,UIImagePickerControllerDelegate,UINavigationControll
         
         
         // name label
-        let namelabel = SKLabelNode(text: emptyString.value1[0])
+        let namelabel = SKLabelNode(text: self.profileData[0].response)
         namelabel.position = CGPoint(x: size.width / 3.2, y: size.width / 1.85)
         namelabel.fontSize = 20
         namelabel.fontColor = .black
         
         
         // age label
-        let agelabel = SKLabelNode(text: emptyString.value1[2])
+        let agelabel = SKLabelNode(text: self.profileData[2].response)
         agelabel.position = CGPoint(x: size.width / 2.8, y: size.width / 2.1)
         agelabel.fontSize = 20
         agelabel.fontColor = .black
         
         
         // gender label
-        let genderlabel = SKLabelNode(text: emptyString.value1[3])
+        let genderlabel = SKLabelNode(text: self.profileData[3].response)
         genderlabel.position = CGPoint(x: size.width / 3.2, y: size.width / 2.5)
         genderlabel.fontSize = 20
         genderlabel.fontColor = .black
         
         
         // email label
-        let emaillabel = SKLabelNode(text: "andy@gmail.com")
+        let emaillabel = SKLabelNode(text: account!)
         emaillabel.position = CGPoint(x: size.width / 1.8, y: size.width / 4.5)
         emaillabel.fontSize = 20
         emaillabel.fontColor = .black
         
         
         // country label
-        let countrylabel = SKLabelNode(text: emptyString.value1[1])
+        let countrylabel = SKLabelNode(text: self.profileData[2].response)
         countrylabel.position = CGPoint(x: size.width / 1.5, y: size.width / 5.9)
         countrylabel.fontSize = 20
         countrylabel.fontColor = .black
         
         
         // solve riddle label
-        let solveriddlelabel = SKLabelNode(text: emptyString.value1[4])
+        let solveriddlelabel = SKLabelNode(text: self.profileData[5].response)
         solveriddlelabel.position = CGPoint(x: size.width / 1.5, y: size.width / 8)
         solveriddlelabel.fontSize = 20
         solveriddlelabel.fontColor = .black
         
         
         // create riddle label
-        let createriddlelabel = SKLabelNode(text: emptyString.value1[5])
+        let createriddlelabel = SKLabelNode(text: self.profileData[4].response)
         createriddlelabel.position = CGPoint(x: size.width / 1.5, y: size.width / 13)
         createriddlelabel.fontSize = 20
         createriddlelabel.fontColor = .black

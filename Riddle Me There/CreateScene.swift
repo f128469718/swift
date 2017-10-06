@@ -12,18 +12,27 @@ import UIKit
 
 
 class CreateScene: SKScene,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
+    
     var sView : SKView?
+    
     var submitbutton : UIButton!
+    var camerabutton : UIButton!
     var titlefield : UITextField!
     var riddlefield : UITextView!
-    var camerabutton : UIButton!
+    
     var maskingCameraRollchoice:Bool = false
     var newImage : SKSpriteNode!
     var Riddlepic : UIImage!
+    
+    var createriddledata = [CreateRiddleData]()
+    var createResponse = [CreateRiddleResponse]()
+    
     override func didMove(to view: SKView) {
         sView = self.view
 
         let background = pos.imageclass(image: "Background-5", x: size.width/2, y: size.height/2,z:-1)
+         background.size = CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
+        
         let title = pos.imageclass(image: "title button", x: size.width/5.9, y: size.height/1.28,z:0)
         let riddle = pos.imageclass(image: "riddle button", x: size.width/5.4, y: size.height/1.5,z:0)
         let awnser  = pos.imageclass(image: "awnser button", x: size.width/5, y: size.height/1.8,z:0)
@@ -64,23 +73,43 @@ class CreateScene: SKScene,UIImagePickerControllerDelegate,UINavigationControlle
     // submit button event
     @objc func submitbuttonevent(sender:UIButton){
         
-        /*var data = "email=andy@gmail.com&title=\(titlefield.text!)&Riddle=\(riddlefield.text!)"
+        //var postdata = "email=andy@gmail.com&title=\(titlefield.text!)&Riddle=\(riddlefield.text!)"
         
-        emptyString = DatabasePost().postDatabase(URL: "http://140.131.12.56/swift/createriddle.php", valuedata: data, method: 2)*/
+        let createdata = CreateRiddleData()
+        createdata.title = titlefield.text!
+        createdata.riddle = riddlefield.text!
+        self.createriddledata.append(createdata)
         
-        DatabasePost().uploadImage(URL: "http://140.131.12.56/swift/createriddle.php", pic: Riddlepic, email: "andy@gmail.com", title: titlefield.text!, riddle: riddlefield.text!)
-        composer.NextScene(nextScene: MenuScene(size: self.size),view: &sView!)
-        camerabutton.removeFromSuperview()
-        submitbutton.removeFromSuperview()
-        titlefield.removeFromSuperview()
-        riddlefield.removeFromSuperview()
+        //let creatjson = DatabasePost().postDatabase(URL: "http://140.131.12.56/swift/createriddle.php", valuedata: postdata)
+        
+         let creatjson = DatabasePost().uploadImage(URL: "http://140.131.12.56/swift/createriddle.php", pic: Riddlepic, email: account, title: titlefield.text!, riddle: riddlefield.text!)
+        
+       /* var jsoncount = creatjson.count
+        
+        for jsonIndex in 0 ..< jsoncount{
+            var createsesponse = CreateRiddleResponse()
+            createsesponse.message = creatjson[jsonIndex]["Message"] as! String
+            createsesponse.status = creatjson[jsonIndex]["Status"] as! String
+            self.createResponse.append(createsesponse)
+        }*/
+        
+       
+        /*if (self.createResponse[0].status == "OK") {
+            composer.NextScene(nextScene: MenuScene(size: self.size),view: &sView!)
+            camerabutton.removeFromSuperview()
+            submitbutton.removeFromSuperview()
+            titlefield.removeFromSuperview()
+            riddlefield.removeFromSuperview()
+        }*/
+        
+        
 
     }
     
     // camera button event
     @objc func camerabuttonevent(sender:UIButton){
         
-        getPhotoFromSource(source: UIImagePickerControllerSourceType.photoLibrary)
+        getPhotoFromSource(source: UIImagePickerControllerSourceType.camera)
         
     }
     

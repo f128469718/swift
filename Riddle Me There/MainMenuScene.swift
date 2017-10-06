@@ -11,7 +11,7 @@ import SpriteKit
 import UIKit
 import SpriteKit
 
-struct Country {
+/*struct Country {
     let value1: Array<String>
     let value2: Array<String>
     let value3: Array<String>
@@ -20,7 +20,7 @@ struct Country {
 }
 
 
-var emptyString: Country!
+var emptyString: Country!*/
 let pos = Position()
 let composer = Composer()
 var account : String!
@@ -35,16 +35,17 @@ class MainMenuScene: SKScene {
         sView = self.view
         
         let background = SKSpriteNode(imageNamed: "Background-2")
+         background.size = CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
         
         let leftImage = SKSpriteNode(imageNamed: "map")
-        
+        leftImage.size = CGSize(width: UIScreen.main.bounds.size.width / 1.5, height: UIScreen.main.bounds.size.height)
         
         background.position = CGPoint(x: size.width/2, y: size.height/2)
         leftImage.position = CGPoint(x: size.width/3, y: size.height/2)
         registerButton.position = CGPoint(x: size.width/1.62, y: size.height * 0.47)
         loginbutton.position = CGPoint(x: size.width/1.5, y: size.height * 0.3)
         
-        leftImage.size = CGSize(width: 300, height: 300)
+        
         background.zPosition = -1
         leftImage.zPosition = 1
         

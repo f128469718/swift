@@ -10,6 +10,7 @@ import SpriteKit
 import GameplayKit
 import UIKit
 
+var username: String!
 class LoginScene: SKScene {
     var sView : SKView?
     
@@ -22,6 +23,10 @@ class LoginScene: SKScene {
     var switchDemo : UISwitch!
     var names = [String]()
     let testarray = [Position(),Composer()] as [Any]
+    var loginresponse = [UserDataResponse]()
+    var userresponse = [UserDataResponse]()
+    var userlogin = [UserData]()
+    
     override func didMove(to view: SKView) {
         sView = self.view
         /*var gameTableView = ShowTableview()
@@ -34,6 +39,7 @@ class LoginScene: SKScene {
         
         let background = SKSpriteNode(imageNamed: "background")
         background.position = CGPoint(x: size.width/2, y: size.height/2)
+         background.size = CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
         let automatic = SKSpriteNode(imageNamed: "automatic login")
         automatic.position = CGPoint(x: size.width/2.8, y: size.height/2.8)
         
@@ -112,18 +118,36 @@ class LoginScene: SKScene {
                 print("Press loginbutton")
                 print("native0.text : \(emailtextfield.text!)")
                 print("native1.text : \(pwdtextfield.text!)")
-                var data = "email=\(emailtextfield.text!)&password=\(pwdtextfield.text!)"
+                var logindata = UserData()
                 
-                emptyString = DatabasePost().postDatabase(URL: "http://140.131.12.56/swift/login.php", valuedata: data, method: 2)
                 
-                //ShowTableview()
+                var postdata = "email=\(emailtextfield.text!)&password=\(pwdtextfield.text!)"
                 
+                let loginjson = DatabasePost().postDatabase(URL: "http://140.131.12.56/swift/login.php", valuedata: postdata)
+                
+                var jsoncount = loginjson.count
+                
+                for jsonIndex in 0 ..< jsoncount{
+                    var dataresponse = UserDataResponse()
+                    dataresponse.response = loginjson[jsonIndex]["value"] as! String
+                    self.loginresponse.append(dataresponse)
+                }
+                
+                let userjson = DatabasePost().postDatabase(URL: "http://140.131.12.56/swift/username.php", valuedata: postdata)
+                
+                jsoncount = userjson.count
+                
+                for jsonIndex in 0 ..< jsoncount{
+                    var username = UserDataResponse()
+                    username.response = loginjson[jsonIndex]["value"] as! String
+                    self.userresponse.append(username)
+                }
                 //print("emptyString:\(emptyString)")
+                username = self.userresponse[0].response
                 
-                
-                if (emptyString.value5 == "true"){
+                if ( self.loginresponse[0].response == "true"){
                     account = emailtextfield.text
-                    composer.NextScene(nextScene: MainMenuScene(size: self.size),view: &sView!)
+                    composer.NextScene(nextScene: MenuScene(size: self.size),view: &sView!)
                     email.removeFromSuperview()
                     password.removeFromSuperview()
                     emailtextfield.removeFromSuperview()

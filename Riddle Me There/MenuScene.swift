@@ -26,10 +26,11 @@ class MenuScene: SKScene {
     
     override func didMove(to view: SKView) {
         sView = self.view
-        
+        print("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
+        print(account)
         // background
         background = pos.imageclass(image: "Background-3", x: size.width * 0.5, y: size.height * 0.5, z: -1)
-        
+         background.size = CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
         // solve button
         solvebtn = UIButton(frame:CGRect(x: 240, y: 5, width: 160, height: 60))
         solvebtn.setBackgroundImage(UIImage(named: "Solve button"), for: UIControlState.normal)
@@ -119,37 +120,93 @@ class MenuScene: SKScene {
     
     // solve button event
     @objc func solvebtnevent(sender:UIButton){
-        
+        composer.NextScene(nextScene: SolveScene(size: self.size),view: &sView!)
+    
+        solvebtn.removeFromSuperview()
+        createbtn.removeFromSuperview()
+        areabtn.removeFromSuperview()
+        friendbtn.removeFromSuperview()
+        profilebtn.removeFromSuperview()
+        scorebtn.removeFromSuperview()
+        extrabtn.removeFromSuperview()
     }
     
     // create button event
     @objc func createbtnevent(sender:UIButton){
+        composer.NextScene(nextScene: CreateScene(size: self.size),view: &sView!)
         
+        solvebtn.removeFromSuperview()
+        createbtn.removeFromSuperview()
+        areabtn.removeFromSuperview()
+        friendbtn.removeFromSuperview()
+        profilebtn.removeFromSuperview()
+        scorebtn.removeFromSuperview()
+        extrabtn.removeFromSuperview()
     }
     
     // area button event
     @objc func areabtnevent(sender:UIButton){
+        composer.NextScene(nextScene: AreaScene(size: self.size),view: &sView!)
         
+        solvebtn.removeFromSuperview()
+        createbtn.removeFromSuperview()
+        areabtn.removeFromSuperview()
+        friendbtn.removeFromSuperview()
+        profilebtn.removeFromSuperview()
+        scorebtn.removeFromSuperview()
+        extrabtn.removeFromSuperview()
     }
     
     // friend button event
     @objc func friendbtnevent(sender:UIButton){
+        composer.NextScene(nextScene: FailScene(size: self.size),view: &sView!)
         
+        solvebtn.removeFromSuperview()
+        createbtn.removeFromSuperview()
+        areabtn.removeFromSuperview()
+        friendbtn.removeFromSuperview()
+        profilebtn.removeFromSuperview()
+        scorebtn.removeFromSuperview()
+        extrabtn.removeFromSuperview()
     }
     
     // profile button event
     @objc func profilebtnevent(sender:UIButton){
+        composer.NextScene(nextScene: ProfileScene(size: self.size),view: &sView!)
         
+        solvebtn.removeFromSuperview()
+        createbtn.removeFromSuperview()
+        areabtn.removeFromSuperview()
+        friendbtn.removeFromSuperview()
+        profilebtn.removeFromSuperview()
+        scorebtn.removeFromSuperview()
+        extrabtn.removeFromSuperview()
     }
     
     // score button event
     @objc func scorebtnevent(sender:UIButton){
+        composer.NextScene(nextScene: ScoresScene(size: self.size),view: &sView!)
         
+        solvebtn.removeFromSuperview()
+        createbtn.removeFromSuperview()
+        areabtn.removeFromSuperview()
+        friendbtn.removeFromSuperview()
+        profilebtn.removeFromSuperview()
+        scorebtn.removeFromSuperview()
+        extrabtn.removeFromSuperview()
     }
     
     // extra button event
     @objc func extrabtnevent(sender:UIButton){
+        composer.NextScene(nextScene: ExtraScene(size: self.size),view: &sView!)
         
+        solvebtn.removeFromSuperview()
+        createbtn.removeFromSuperview()
+        areabtn.removeFromSuperview()
+        friendbtn.removeFromSuperview()
+        profilebtn.removeFromSuperview()
+        scorebtn.removeFromSuperview()
+        extrabtn.removeFromSuperview()
     }
     
     

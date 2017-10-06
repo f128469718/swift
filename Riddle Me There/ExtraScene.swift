@@ -24,6 +24,7 @@ class ExtraScene: SKScene {
         sView = self.view
         
         let background = pos.imageclass(image: "background-15", x: size.width/2, y: size.height/2,z:-1)
+         background.size = CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
         
         returnPress = UIButton(frame:CGRect(x: 40, y: 270, width: 75, height: 70))
         returnPress.setBackgroundImage(UIImage(named: "returnPress"), for: UIControlState.normal)

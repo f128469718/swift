@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8419F29D1F5651580081F3F1 /* CustomTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8419F29C1F5651580081F3F1 /* CustomTableCell.xib */; };
+		8419F29F1F56527F0081F3F1 /* CustomTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8419F29E1F56527F0081F3F1 /* CustomTableCell.swift */; };
 		84264E531F419B3F005CB3C7 /* ExtraScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84264E521F419B3F005CB3C7 /* ExtraScene.swift */; };
 		842E22EC1ED3DCE700FD0F4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E22EB1ED3DCE700FD0F4B /* AppDelegate.swift */; };
 		842E22F21ED3DCE700FD0F4B /* LoginScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E22F11ED3DCE700FD0F4B /* LoginScene.swift */; };
@@ -23,18 +25,29 @@
 		8430FFAC1F2047DC00EACEF4 /* ShowTableview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8430FFAB1F2047DC00EACEF4 /* ShowTableview.swift */; };
 		84374A8D1F3C127B00718281 /* SolveScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84374A8C1F3C127B00718281 /* SolveScene.swift */; };
 		845002451F2AD16100A70FD6 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845002441F2AD16100A70FD6 /* MenuScene.swift */; };
+		8453340B1F60D6CC00CACF13 /* LocalScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8453340A1F60D6CC00CACF13 /* LocalScene.swift */; };
+		8453340D1F60FA2C00CACF13 /* AnswerScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8453340C1F60FA2C00CACF13 /* AnswerScene.swift */; };
 		8457F8F81F39A2AA00753C15 /* ScoresScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457F8F71F39A2AA00753C15 /* ScoresScene.swift */; };
+		845864DD1F57B613005F5006 /* CountryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845864DC1F57B613005F5006 /* CountryData.swift */; };
 		8461495F1F42CFCC003B7B12 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8461495E1F42CFCC003B7B12 /* Alertable.swift */; };
 		846B37C31F452E0D0001672F /* ProfileScene_Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B37C21F452E0C0001672F /* ProfileScene_Camera.swift */; };
 		846B37C51F453CBE0001672F /* DataFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B37C41F453CBE0001672F /* DataFile.swift */; };
 		846B41431F25DFE00026CFD2 /* RegisterScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B41421F25DFE00026CFD2 /* RegisterScene.swift */; };
+		846EEEBB1F57DA9A004DC558 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EEEBA1F57DA9A004DC558 /* UserData.swift */; };
+		846EEEBD1F57EF02004DC558 /* SolveRiddleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EEEBC1F57EF02004DC558 /* SolveRiddleData.swift */; };
+		847559921F6142D6000EBE1C /* SuccessScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847559911F6142D6000EBE1C /* SuccessScene.swift */; };
+		8499B0471F58F90D002A397D /* CreateRiddleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8499B0461F58F90D002A397D /* CreateRiddleData.swift */; };
+		8499B0491F5910CE002A397D /* RiddleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8499B0481F5910CE002A397D /* RiddleData.swift */; };
+		8499B04B1F59281F002A397D /* FriendsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8499B04A1F59281F002A397D /* FriendsData.swift */; };
 		849C32531F29B6D7002A32D6 /* ShowPickerViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C32521F29B6D7002A32D6 /* ShowPickerViewUI.swift */; };
+		84A0AF1D1F622A27008E9714 /* FailScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A0AF1C1F622A27008E9714 /* FailScene.swift */; };
 		84AEE2A01F3D56A300DA4900 /* CreateScene_Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AEE29F1F3D56A300DA4900 /* CreateScene_Camera.swift */; };
 		84BC87AE1F2EDACE0005068B /* CreateScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC87AD1F2EDACE0005068B /* CreateScene.swift */; };
 		84BC87B01F2F287E0005068B /* AreaScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC87AF1F2F287E0005068B /* AreaScene.swift */; };
 		84BC87B21F2F6C920005068B /* FriendsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC87B11F2F6C920005068B /* FriendsScene.swift */; };
 		84C575B81F2B047D00A351BA /* ShowPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C575B71F2B047D00A351BA /* ShowPickerView.swift */; };
 		84EA9DBA1F0C927A0011587C /* Composer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EA9DB91F0C927A0011587C /* Composer.swift */; };
+		84ECBC701F4EEAD100EDEEA8 /* testfun.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ECBC6F1F4EEAD100EDEEA8 /* testfun.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +68,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8419F29C1F5651580081F3F1 /* CustomTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableCell.xib; sourceTree = "<group>"; };
+		8419F29E1F56527F0081F3F1 /* CustomTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableCell.swift; sourceTree = "<group>"; };
 		84264E521F419B3F005CB3C7 /* ExtraScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraScene.swift; sourceTree = "<group>"; };
 		842E22E81ED3DCE700FD0F4B /* Riddle Me There.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Riddle Me There.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		842E22EB1ED3DCE700FD0F4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,18 +92,29 @@
 		8430FFAB1F2047DC00EACEF4 /* ShowTableview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowTableview.swift; sourceTree = "<group>"; };
 		84374A8C1F3C127B00718281 /* SolveScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolveScene.swift; sourceTree = "<group>"; };
 		845002441F2AD16100A70FD6 /* MenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
+		8453340A1F60D6CC00CACF13 /* LocalScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalScene.swift; sourceTree = "<group>"; };
+		8453340C1F60FA2C00CACF13 /* AnswerScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerScene.swift; sourceTree = "<group>"; };
 		8457F8F71F39A2AA00753C15 /* ScoresScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresScene.swift; sourceTree = "<group>"; };
+		845864DC1F57B613005F5006 /* CountryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryData.swift; sourceTree = "<group>"; };
 		8461495E1F42CFCC003B7B12 /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
 		846B37C21F452E0C0001672F /* ProfileScene_Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScene_Camera.swift; sourceTree = "<group>"; };
 		846B37C41F453CBE0001672F /* DataFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFile.swift; sourceTree = "<group>"; };
 		846B41421F25DFE00026CFD2 /* RegisterScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScene.swift; sourceTree = "<group>"; };
+		846EEEBA1F57DA9A004DC558 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		846EEEBC1F57EF02004DC558 /* SolveRiddleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolveRiddleData.swift; sourceTree = "<group>"; };
+		847559911F6142D6000EBE1C /* SuccessScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessScene.swift; sourceTree = "<group>"; };
+		8499B0461F58F90D002A397D /* CreateRiddleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRiddleData.swift; sourceTree = "<group>"; };
+		8499B0481F5910CE002A397D /* RiddleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiddleData.swift; sourceTree = "<group>"; };
+		8499B04A1F59281F002A397D /* FriendsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsData.swift; sourceTree = "<group>"; };
 		849C32521F29B6D7002A32D6 /* ShowPickerViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPickerViewUI.swift; sourceTree = "<group>"; };
+		84A0AF1C1F622A27008E9714 /* FailScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailScene.swift; sourceTree = "<group>"; };
 		84AEE29F1F3D56A300DA4900 /* CreateScene_Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateScene_Camera.swift; sourceTree = "<group>"; };
 		84BC87AD1F2EDACE0005068B /* CreateScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateScene.swift; sourceTree = "<group>"; };
 		84BC87AF1F2F287E0005068B /* AreaScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaScene.swift; sourceTree = "<group>"; };
 		84BC87B11F2F6C920005068B /* FriendsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsScene.swift; sourceTree = "<group>"; };
 		84C575B71F2B047D00A351BA /* ShowPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPickerView.swift; sourceTree = "<group>"; };
 		84EA9DB91F0C927A0011587C /* Composer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Composer.swift; sourceTree = "<group>"; };
+		84ECBC6F1F4EEAD100EDEEA8 /* testfun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testfun.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +157,9 @@
 				8461495E1F42CFCC003B7B12 /* Alertable.swift */,
 				846B37C21F452E0C0001672F /* ProfileScene_Camera.swift */,
 				846B37C41F453CBE0001672F /* DataFile.swift */,
+				84ECBC6F1F4EEAD100EDEEA8 /* testfun.swift */,
+				8419F29C1F5651580081F3F1 /* CustomTableCell.xib */,
+				8419F29E1F56527F0081F3F1 /* CustomTableCell.swift */,
 			);
 			path = Allfunc;
 			sourceTree = "<group>";
@@ -158,6 +187,7 @@
 		842E22EA1ED3DCE700FD0F4B /* Riddle Me There */ = {
 			isa = PBXGroup;
 			children = (
+				845864DB1F57AA14005F5006 /* JsonData */,
 				8419FC0B1F21F28D0022A364 /* Allfunc */,
 				842E22F51ED3DCE700FD0F4B /* Main.storyboard */,
 				842E22F81ED3DCE700FD0F4B /* Assets.xcassets */,
@@ -174,6 +204,10 @@
 				846B41421F25DFE00026CFD2 /* RegisterScene.swift */,
 				8457F8F71F39A2AA00753C15 /* ScoresScene.swift */,
 				84374A8C1F3C127B00718281 /* SolveScene.swift */,
+				8453340A1F60D6CC00CACF13 /* LocalScene.swift */,
+				8453340C1F60FA2C00CACF13 /* AnswerScene.swift */,
+				847559911F6142D6000EBE1C /* SuccessScene.swift */,
+				84A0AF1C1F622A27008E9714 /* FailScene.swift */,
 			);
 			path = "Riddle Me There";
 			sourceTree = "<group>";
@@ -194,6 +228,19 @@
 				842E23131ED3DCE700FD0F4B /* Info.plist */,
 			);
 			path = "Riddle Me ThereUITests";
+			sourceTree = "<group>";
+		};
+		845864DB1F57AA14005F5006 /* JsonData */ = {
+			isa = PBXGroup;
+			children = (
+				845864DC1F57B613005F5006 /* CountryData.swift */,
+				846EEEBA1F57DA9A004DC558 /* UserData.swift */,
+				846EEEBC1F57EF02004DC558 /* SolveRiddleData.swift */,
+				8499B0461F58F90D002A397D /* CreateRiddleData.swift */,
+				8499B0481F5910CE002A397D /* RiddleData.swift */,
+				8499B04A1F59281F002A397D /* FriendsData.swift */,
+			);
+			path = JsonData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,6 +359,7 @@
 				842E22F71ED3DCE700FD0F4B /* Main.storyboard in Resources */,
 				842E22F91ED3DCE700FD0F4B /* Assets.xcassets in Resources */,
 				842E22FC1ED3DCE700FD0F4B /* LaunchScreen.storyboard in Resources */,
+				8419F29D1F5651580081F3F1 /* CustomTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,11 +388,16 @@
 				84BC87B01F2F287E0005068B /* AreaScene.swift in Sources */,
 				84264E531F419B3F005CB3C7 /* ExtraScene.swift in Sources */,
 				846B37C31F452E0D0001672F /* ProfileScene_Camera.swift in Sources */,
+				8453340B1F60D6CC00CACF13 /* LocalScene.swift in Sources */,
 				84C575B81F2B047D00A351BA /* ShowPickerView.swift in Sources */,
 				842E22F21ED3DCE700FD0F4B /* LoginScene.swift in Sources */,
+				845864DD1F57B613005F5006 /* CountryData.swift in Sources */,
 				8430FFAC1F2047DC00EACEF4 /* ShowTableview.swift in Sources */,
 				846B41431F25DFE00026CFD2 /* RegisterScene.swift in Sources */,
 				84BC87B21F2F6C920005068B /* FriendsScene.swift in Sources */,
+				84ECBC701F4EEAD100EDEEA8 /* testfun.swift in Sources */,
+				846EEEBD1F57EF02004DC558 /* SolveRiddleData.swift in Sources */,
+				847559921F6142D6000EBE1C /* SuccessScene.swift in Sources */,
 				8430FFA81F2047C700EACEF4 /* Position.swift in Sources */,
 				84AEE2A01F3D56A300DA4900 /* CreateScene_Camera.swift in Sources */,
 				84BC87AE1F2EDACE0005068B /* CreateScene.swift in Sources */,
@@ -355,10 +408,17 @@
 				842E23201ED3E1F200FD0F4B /* MainMenuScene.swift in Sources */,
 				8461495F1F42CFCC003B7B12 /* Alertable.swift in Sources */,
 				842E22EC1ED3DCE700FD0F4B /* AppDelegate.swift in Sources */,
+				846EEEBB1F57DA9A004DC558 /* UserData.swift in Sources */,
 				84374A8D1F3C127B00718281 /* SolveScene.swift in Sources */,
+				8499B0471F58F90D002A397D /* CreateRiddleData.swift in Sources */,
+				8453340D1F60FA2C00CACF13 /* AnswerScene.swift in Sources */,
+				8419F29F1F56527F0081F3F1 /* CustomTableCell.swift in Sources */,
 				845002451F2AD16100A70FD6 /* MenuScene.swift in Sources */,
 				8430FFAA1F2047D600EACEF4 /* DatabasePost.swift in Sources */,
 				849C32531F29B6D7002A32D6 /* ShowPickerViewUI.swift in Sources */,
+				84A0AF1D1F622A27008E9714 /* FailScene.swift in Sources */,
+				8499B04B1F59281F002A397D /* FriendsData.swift in Sources */,
+				8499B0491F5910CE002A397D /* RiddleData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

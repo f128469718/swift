@@ -16,21 +16,43 @@ class SolveScene : SKScene {
     var background: SKSpriteNode!
     var returnbtn :  UIButton!
     var gameTableView = ShowTableview()
+    var solveriddledata = [SolveRiddleData]()
+    
     override func didMove(to view: SKView) {
         sView = self.view
-        var data = "email=andy@gmail.com"
-        emptyString = DatabasePost().postDatabase(URL: "http://140.131.12.56/swift/searchsolveriddle.php", valuedata: data, method: 3)
+        var postvalue = "email=\(account)"
+        let solvejson = DatabasePost().postDatabase(URL: "http://140.131.12.56/swift/searchsolveriddle.php", valuedata: postvalue)
+        
+        
+        var jsoncount = solvejson.count
+        
+        for jsonIndex in 0 ..< jsoncount{
+            var nationdata = SolveRiddleData()
+            nationdata.title = solvejson[jsonIndex]["title"] as! String
+            nationdata.riddle = solvejson[jsonIndex]["riddle"] as! String
+            nationdata.likeriddle = solvejson[jsonIndex]["riddlelike"] as! String
+            nationdata.dislikeriddle = solvejson[jsonIndex]["riddledislike"] as! String
+            self.solveriddledata.append(nationdata)
+        }
+        
         
         gameTableView.sView = sView
         gameTableView.vWidth = sView.bounds.width
         gameTableView.vHeight = sView.bounds.height
-        print(emptyString.value1)
+        
         gameTableView.title = "Solve Riddle"
         
-        gameTableView.items = emptyString.value1
+        
+        for index in 0 ..< self.solveriddledata.count {
+            gameTableView.items.append(self.solveriddledata[index].title)
+            gameTableView.items2.append(self.solveriddledata[index].riddle)
+            gameTableView.items3.append(self.solveriddledata[index].likeriddle)
+            gameTableView.items4.append(self.solveriddledata[index].dislikeriddle)
+        }
+        /*gameTableView.items = emptyString.value1
         gameTableView.items2 = emptyString.value2
         gameTableView.items3 = emptyString.value3
-        gameTableView.items4 = emptyString.value4
+        gameTableView.items4 = emptyString.value4*/
         gameTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         gameTableView.frame=CGRect(x:20,y:50,width:280,height:200)
         gameTableView.backgroundColor = UIColor.clear

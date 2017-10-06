@@ -11,20 +11,28 @@ import SpriteKit
 import GameplayKit
 import UIKit
 
-var localriddlesbtn : UIButton!
-var specialriddlesbtn : UIButton!
-var mapbtn : UIButton!
-var returnbtn : UIButton!
+
 
 class AreaScene: SKScene {
+    
     var sView : SKView?
+    
+    var localriddlesbtn : UIButton!
+    var specialriddlesbtn : UIButton!
+    var mapbtn : UIButton!
+    var returnbtn : UIButton!
+    
+    
     var gameTableView = ShowTableview()
+    
+    var riddleData = [RiddleData]()
     
     override func didMove(to view: SKView) {
         sView = self.view
         
         // background image
         let background = pos.imageclass(image: "Background-7", x: size.width/2, y: size.height/2,z:-1)
+         background.size = CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
         
         // create riddle text image
         let Creatimage = pos.imageclass(image: "created riddles", x: size.width/1.1, y: size.height/1.8,z:1)
@@ -54,18 +62,36 @@ class AreaScene: SKScene {
         
         
         //tableview
-        var data = "email=andy@gmail.com"
-        emptyString = DatabasePost().postDatabase(URL: "http://140.131.12.56/swift/searchcreateriddle.php", valuedata: data, method: 3)
+        var postvalue = "email=\(account!)"
+        let riddlejson = DatabasePost().postDatabase(URL: "http://140.131.12.56/swift/searchcreateriddle.php", valuedata: postvalue)
+        
+        
+        var jsoncount = riddlejson.count
+        
+        for jsonIndex in 0 ..< jsoncount{
+            let riddledata = RiddleData()
+            riddledata.title = riddlejson[jsonIndex]["title"] as! String
+            riddledata.riddle = riddlejson[jsonIndex]["riddle"] as! String
+            riddledata.likeriddle = riddlejson[jsonIndex]["riddlelike"] as! String
+            riddledata.dislikeriddle = riddlejson[jsonIndex]["riddledislike"] as! String
+            self.riddleData.append(riddledata)
+        }
         gameTableView.sView = sView!
         gameTableView.vWidth = (sView?.bounds.width)!
         gameTableView.vHeight = (sView?.bounds.height)!
-        print(emptyString.value1)
+        
         gameTableView.title = "Riddle"
         
-        gameTableView.items = emptyString.value1
+        for index in 0 ..< self.riddleData.count {
+            gameTableView.items.append(self.riddleData[index].title)
+            gameTableView.items2.append(self.riddleData[index].riddle)
+            gameTableView.items3.append(self.riddleData[index].likeriddle)
+            gameTableView.items4.append(self.riddleData[index].dislikeriddle)
+        }
+        /*gameTableView.items = emptyString.value1
         gameTableView.items2 = emptyString.value2
         gameTableView.items3 = emptyString.value3
-        gameTableView.items4 = emptyString.value4
+        gameTableView.items4 = emptyString.value4*/
         gameTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         gameTableView.frame=CGRect(x:20,y:50,width:280,height:200)
         gameTableView.backgroundColor = UIColor.clear
@@ -114,7 +140,13 @@ class AreaScene: SKScene {
    
     // local riddles button event
     @objc func localriddlesbtnevent(sender:UIButton){
-        
+        composer.NextScene(nextScene: LocalScene(size: self.size),view: &sView!)
+       
+        localriddlesbtn.removeFromSuperview()
+        specialriddlesbtn.removeFromSuperview()
+        mapbtn.removeFromSuperview()
+        returnbtn.removeFromSuperview()
+        gameTableView.removeFromSuperview()
     }
     
     // special riddles button event

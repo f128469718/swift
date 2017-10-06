@@ -12,15 +12,10 @@ import UIKit
 class DatabasePost {
     
     var splitedArray = Array<String>()
-    func postDatabase(URL: String,valuedata: String,method: Int) -> Country{
-        var stringValue : Country!
-        var names = [String]()
-        var chnames = [String]()
-        var abbnames = [String]()
-        var arrayvalue4 = [String]()
-        var arrayvalue5 = [String]()
-        var arrayvalue6 = [String]()
-        var values = ""
+    func postDatabase(URL: String,valuedata: String) -> [[String : Any]]{
+        var stringValue : [[String : Any]]!
+        
+        
         let request = NSMutableURLRequest(url: NSURL(string: URL)! as URL)
         /*let request = NSMutableURLRequest(url: NSURL(string: "http://140.131.12.56/test.php")! as URL)*/
         request.httpMethod = "POST"
@@ -39,9 +34,13 @@ class DatabasePost {
                 print("error=\(String(describing: error))")
                 return
             }else{
-                let json = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions()) as? [AnyObject]
+                let json = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions()) as? [[String : Any]]
                 print("json : \(json)")
-                if (method == 1 ){
+                
+                if ((json) != nil) {
+                    stringValue = json!
+                }
+                /*if (method == 1 ){
                     
                     for jsons in json!! {
                         if let name = jsons["name"] as? String {
@@ -86,7 +85,26 @@ class DatabasePost {
                             
                         }
                     }
-                }
+                }else if (method == 5){
+                    for jsons in json!! {
+                        if let name = jsons["name"] as? String{
+                            if let score = jsons["grade"] as? String{
+                                if let creates = jsons["created"] as? String{
+                                    if let solves = jsons["solved"] as? String{
+                                        
+                                        names.append(name)
+                                        chnames.append(score)
+                                        abbnames.append(creates)
+                                        arrayvalue4.append(solves)
+                                        let user = Country(value1: names, value2: chnames, value3: abbnames, value4: arrayvalue4, value5:"")
+                                        stringValue = user
+                                    }
+                                }
+                                
+                            }
+                        }
+                    }
+                }*/
                 
                
             }
@@ -96,10 +114,10 @@ class DatabasePost {
             print("response = \(String(describing: response))")
             
             let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
-            //print("responseString = \(String(describing: responseString))")
+            print("responseString = \(String(describing: responseString))")
             
             print("data : \(String(describing: data))")
-            if (method == 2){
+            /*if (method == 2){
                 if let stringData = String(data: data!, encoding: String.Encoding.utf8) {
                     print("stringData : \(stringData)") //JSONSerialization
                     //self.splitedArray = stringData.components(separatedBy:",")
@@ -107,7 +125,7 @@ class DatabasePost {
                     let user = Country(value1: names, value2: chnames, value3: abbnames, value4: arrayvalue4, value5: stringData)
                     stringValue = user
                 }
-            }
+            }*/
             
             //發出信號燈
             semaphore.signal()
@@ -165,7 +183,7 @@ class DatabasePost {
             print("****** response data = \(responseString!)")
             
             do {
-                let json = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions()) as? [Dictionary<String, Any>]
+                let json = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions()) as? [[String : Any]]
                 
                 print("json\(json)")
                 

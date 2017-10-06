@@ -12,10 +12,10 @@ import SpriteKit
 
 class ShowTableview: UITableView,UITableViewDelegate,UITableViewDataSource {
     var title = ""
-    var items: [String] = ["Player1", "Player2", "Player3"]
-    var items2: [String] = ["Player1", "Player2", "Player3"]
-    var items3: [String] = ["Player1", "Player2", "Player3"]
-    var items4: [String] = ["Player1", "Player2", "Player3"]
+    var items: [String] = []
+    var items2: [String] = []
+    var items3: [String] = []
+    var items4: [String] = []
     var vWidth : CGFloat = 0.0
     var vHeight : CGFloat = 0.0
     var sView = UIView()
@@ -258,9 +258,12 @@ class ShowTableview2: UITableView,UITableViewDelegate,UITableViewDataSource {
     
     func abc(name:String) {
         var data = "email=andy@gmail.com&friendname=\(name)"
-        emptyString = DatabasePost().postDatabase(URL: "http://140.131.12.56/swift/deletefriends.php", valuedata: data, method: 2)
-        value = emptyString.value5
+        //emptyString = DatabasePost().postDatabase(URL: "http://140.131.12.56/swift/deletefriends.php", valuedata: data, method: 2)
+        //value = emptyString.value5
         
     }
 }
+
+
+
 
