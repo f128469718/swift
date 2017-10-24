@@ -15,17 +15,16 @@ class Composer: SKScene {
     
     
     func NextScene(nextScene: SKScene ,view: inout SKView) {
-        
-        let transition:SKTransition = SKTransition.crossFade(withDuration: 0.5)
-        view.presentScene(nextScene, transition: transition)
-    }
-    
-    func SceneEmpty(view: inout SKView) {
         view.scene?.removeAllActions()
         view.scene?.removeFromParent()
         view.scene?.removeAllChildren()
         view.presentScene(nil)
+        let transition:SKTransition = SKTransition.crossFade(withDuration: 0.5)
+        view.presentScene(nextScene, transition: transition)
+        
     }
+    
+   
     
 }
 

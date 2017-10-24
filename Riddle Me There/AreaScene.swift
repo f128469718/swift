@@ -66,7 +66,7 @@ class AreaScene: SKScene {
         
         //tableview
         var postvalue = "email=\(account!)"
-        let riddlejson = DatabasePost().postDatabase(URL: "http://140.131.12.56/swift/searchcreateriddle.php", valuedata: postvalue)
+        let riddlejson = DatabasePost().postDatabase(URL: "http://mmlab.lhu.edu.tw/searchcreateriddle(swift).php", valuedata: postvalue)
         
         
         var jsoncount = riddlejson.count

@@ -1,111 +1,102 @@
 //
-//  FriendsScene.swift
+//  InviteReward.swift
 //  Riddle Me There
 //
-//  Created by admin on 2017/7/31.
+//  Created by admin on 2017/10/16.
 //  Copyright © 2017年 admin. All rights reserved.
 //
 
 import Foundation
-
 import SpriteKit
-import GameplayKit
-import UIKit
 
-
-
-class FriendsScene: SKScene {
-    var sView : SKView?
+class InviteFriendScene: SKScene {
     
+    var sView: SKView?
+    
+    var FriendText : SKLabelNode!
+    
+    var sendButton : UIButton!
     var returnbtn : UIButton!
+    var Friendbutton : UIButton!
     var invitefriendsbutton : UIButton!
     var ConfirmFriendsbutton : UIButton!
     var Messagesbutton :UIButton!
     
-    var gameTableView = ShowTableview2()
-    
-    var friendsData = [FriendsData]()
+    var friendText : UITextField!
     
     override func didMove(to view: SKView) {
+        
         sView = self.view
         
-        // background image
-        let background = pos.imageclass(image: "background-18", x: size.width/2, y: size.height/2,z:-1)
+        let background = SKSpriteNode(imageNamed: "background-18")
+        background.position = CGPoint(x: size.width/2, y: size.height/2)
         background.size = CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
+        addChild(background)
         
-        // friends text image
-        let friends = pos.imageclass(image: "friends", x: size.width/1.12, y: size.height/1.7,z:0)
-        friends.size = CGSize(width: (sView?.bounds.size.width)!/6, height: (sView?.bounds.size.height)!/7)
+        FriendText = SKLabelNode(text: "Friend Name")
+        FriendText.position = CGPoint(x: (sView?.bounds.size.width)!/2, y: (sView?.bounds.size.height)!/1.5)
+        FriendText.fontSize = 45
+        FriendText.fontName = "AvenirNext-Bold"
+        addChild(FriendText)
+        
+        
+        // send Button
+        sendButton = UIButton(frame:CGRect(x: 300, y: 150, width: 180, height: 50))
+        sendButton.setBackgroundImage(UIImage(named: "send0"), for: UIControlState.normal)
+        sendButton.addTarget(self,action: #selector(sendButtonevent),for: .touchUpInside)//修改按鈕細節
+        sView?.addSubview(sendButton)
+        
+        // Friend button
+        Friendbutton = UIButton(frame:CGRect(x: 300, y: 150, width: 180, height: 50))
+        Friendbutton.setBackgroundImage(UIImage(named: "friends"), for: UIControlState.normal)
+        Friendbutton.addTarget(self,action: #selector(Friendbuttonevnet),for: .touchUpInside)//修改按鈕細節
+        sView?.addSubview(Friendbutton)
+        
         // invite friends button
         invitefriendsbutton = UIButton(frame:CGRect(x: 300, y: 150, width: 180, height: 50))
         invitefriendsbutton.setBackgroundImage(UIImage(named: "invitefriends"), for: UIControlState.normal)
         invitefriendsbutton.addTarget(self,action: #selector(invitefriendsbtnevent),for: .touchUpInside)//修改按鈕細節
+        sView?.addSubview(invitefriendsbutton)
         
         // Confirm Friends button
         ConfirmFriendsbutton = UIButton(frame:CGRect(x: 70, y: 245, width: 220, height: 80))
         ConfirmFriendsbutton.setBackgroundImage(UIImage(named: "ConfirmFriends"), for: UIControlState.normal)
         ConfirmFriendsbutton.addTarget(self,action: #selector(ConfirmFriendsbtnevent),for: .touchUpInside)//修改按鈕細節
+        sView?.addSubview(ConfirmFriendsbutton)
         
         // Messages button
         Messagesbutton = UIButton(frame:CGRect(x: 40, y: 270, width: 75, height: 70))
         Messagesbutton.setBackgroundImage(UIImage(named: "Messages"), for: UIControlState.normal)
         Messagesbutton.addTarget(self,action: #selector(Messagesbtnevent),for: .touchUpInside)//修改按鈕細節
+        sView?.addSubview(Messagesbutton)
         
         // return button
         returnbtn = UIButton(frame:CGRect(x: 40, y: 270, width: 75, height: 70))
         returnbtn.setBackgroundImage(UIImage(named: "returnPress"), for: UIControlState.normal)
         returnbtn.addTarget(self,action: #selector(returnbtnevent),for: .touchUpInside)//修改按鈕細節
-        
-        
-        //tableview
-        var postdata = "email=andy@gmail.com"
-        var friendjson = DatabasePost().postDatabase(URL: "http://mmlab.lhu.edu.tw/searchfriends(swift).php", valuedata: postdata)
-        gameTableView.sView = sView!
-        gameTableView.title = "Friends"
-        
-        
-        var jsoncount = friendjson.count
-        
-        for jsonIndex in 0 ..< jsoncount{
-            let fridata = FriendsData()
-            fridata.friends = friendjson[jsonIndex]["value"] as! String
-            
-            self.friendsData.append(fridata)
-        }
-        
-        
-        for index in 0 ..< self.friendsData.count {
-            gameTableView.items.append(self.friendsData[index].friends)
-        }
-        
-        //gameTableView.items = emptyString.value1
-        
-        gameTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        gameTableView.frame=CGRect(x:20,y:50,width:280,height:200)
-        gameTableView.backgroundColor = UIColor.clear
-        
-        gameTableView.reloadData()
-        
-        // add view
-        sView?.addSubview(invitefriendsbutton)
-        sView?.addSubview(ConfirmFriendsbutton)
         sView?.addSubview(returnbtn)
-        sView?.addSubview(Messagesbutton)
-        sView?.addSubview(gameTableView)
         
-        addChild(background)
-        addChild(friends)
+        
+        friendText = UIdesign().textfiled(x: (sView?.bounds.width)!*0.35, y: (sView?.bounds.height)! * 0.44, width: (sView?.bounds.width)!*0.3, height: 18, text: "", level: 1)
+        sView?.addSubview(friendText)
+        
         
         
         // close auto layout
+        sendButton.translatesAutoresizingMaskIntoConstraints = false
         returnbtn.translatesAutoresizingMaskIntoConstraints = false
+        Friendbutton.translatesAutoresizingMaskIntoConstraints = false
         invitefriendsbutton.translatesAutoresizingMaskIntoConstraints = false
         ConfirmFriendsbutton.translatesAutoresizingMaskIntoConstraints = false
         Messagesbutton.translatesAutoresizingMaskIntoConstraints = false
-        gameTableView.translatesAutoresizingMaskIntoConstraints = false
+
         
         
         // set auto layout
+         pos.autoPosition(item1: sendButton, item2: self.view!, topValue: view.bounds.height * 0.6, bottomValue: -(view.bounds.height * 0.4), leftValue: view.bounds.width * 0.4, rightValue: -(view.bounds.width * 0.6), widthValue: 0.18, heightValue: 0.08)
+        
+        pos.autoPosition(item1: Friendbutton, item2: self.view!, topValue: view.bounds.height * 0.35, bottomValue: -(view.bounds.height * 0.65), leftValue: view.bounds.width * 0.79, rightValue: -(view.bounds.width * 0.21), widthValue: 0.2, heightValue: 0.12)
+        
         pos.autoPosition(item1: invitefriendsbutton, item2: self.view!, topValue: view.bounds.height * 0.5, bottomValue: -(view.bounds.height * 0.5), leftValue: view.bounds.width * 0.69, rightValue: -(view.bounds.width * 0.31), widthValue: 0.3, heightValue: 0.13)
         
         pos.autoPosition(item1: ConfirmFriendsbutton, item2: self.view!, topValue: view.bounds.height * 0.66, bottomValue: -(view.bounds.height * 0.34), leftValue: view.bounds.width * 0.69, rightValue: -(view.bounds.width * 0.31), widthValue: 0.3, heightValue: 0.13)
@@ -114,46 +105,20 @@ class FriendsScene: SKScene {
         
         pos.autoPosition(item1: returnbtn, item2: self.view!, topValue: view.bounds.height * 0.84, bottomValue: -(view.bounds.height * 0.16), leftValue: view.bounds.width * 0.08, rightValue: -(view.bounds.width * 0.92), widthValue: 0.14, heightValue: 0.19)
         
-        pos.autoPosition(item1: gameTableView, item2: sView!, topValue: view.bounds.height * 0.1, bottomValue: -(view.bounds.height * 0.9), leftValue: view.bounds.width * 0.26, rightValue: -(view.bounds.width * 0.74), widthValue: 0.4, heightValue: 0.8)
-        
-        
+    }
+    
+    // Friend button event
+    @objc func sendButtonevent(sender:UIButton){
         
     }
     
-    override func update(_ currentTime: TimeInterval) {
-        if (gameTableView.value == "true") {
-            print("update")
-            //tableview
-            var postdata = "email=andy@gmail.com"
-            let friendjson = DatabasePost().postDatabase(URL: "http://140.131.12.56/swift/searchfriends.php", valuedata: postdata)
-            
-            var jsoncount = friendjson.count
-            
-            for jsonIndex in 0 ..< jsoncount{
-                var frienddata = FriendsData()
-                frienddata.friends = friendjson[jsonIndex]["value"] as! String
-                
-                self.friendsData.append(frienddata)
-            }
-            
-            for index in 0 ..< self.friendsData.count {
-                gameTableView.items.append(self.friendsData[index].friends)
-            }
-            
-            gameTableView.reloadData()
-            gameTableView.value = ""
-            
-        }
+    // Friend button event
+    @objc func Friendbuttonevnet(sender:UIButton){
+        
     }
     
     // invite friends button event
     @objc func invitefriendsbtnevent(sender:UIButton){
-        composer.NextScene(nextScene: InviteFriendScene(size: self.size),view: &sView!)
-        returnbtn.removeFromSuperview()
-        invitefriendsbutton.removeFromSuperview()
-        ConfirmFriendsbutton.removeFromSuperview()
-        Messagesbutton.removeFromSuperview()
-        gameTableView.removeFromSuperview()
         
     }
     
@@ -172,5 +137,4 @@ class FriendsScene: SKScene {
         
     }
 }
-
 

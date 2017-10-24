@@ -19,9 +19,10 @@ class SolveScene : SKScene {
     var solveriddledata = [SolveRiddleData]()
     
     override func didMove(to view: SKView) {
+       
         sView = self.view
-        var postvalue = "email=\(account)"
-        let solvejson = DatabasePost().postDatabase(URL: "http://140.131.12.56/swift/searchsolveriddle.php", valuedata: postvalue)
+        var postvalue = "email=\(account!)"
+        let solvejson = DatabasePost().postDatabase(URL: "http://mmlab.lhu.edu.tw/searchsolveriddle(swift).php", valuedata: postvalue)
         
         
         var jsoncount = solvejson.count
@@ -60,6 +61,7 @@ class SolveScene : SKScene {
         gameTableView.reloadData()
         
         background = pos.imageclass(image: "Background-4", x: size.width * 0.5, y: size.height * 0.5, z: -1)
+         background.size = CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
         
         returnbtn = UIButton(frame:CGRect(x: sView.bounds.width * 0.1, y: sView.bounds.height * 0.8, width: sView.bounds.width * 0.1, height: sView.bounds.width * 0.1))
         returnbtn.setBackgroundImage(UIImage(named: "returnPress"), for: UIControlState.normal)

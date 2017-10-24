@@ -148,8 +148,8 @@ class ShowTableview: UITableView,UITableViewDelegate,UITableViewDataSource {
 
 class ShowTableview2: UITableView,UITableViewDelegate,UITableViewDataSource {
     var title = ""
-    var items: [String] = ["Player1", "Player2", "Player3"]
-    var items2: [String] = ["Player1", "Player2", "Player3"]
+    var items: [String] = []
+    var items2: [String] = []
     var value = ""
     
     var sView = UIView()

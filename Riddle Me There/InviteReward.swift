@@ -47,7 +47,7 @@ class InviteReward: SKScene {
     }
     //\(account)
     @objc func sendBtnevent(sender:UIButton){
-        var postvalue = "email=andy@gmail.com&code=\(codeText.text!)"
+        var postvalue = "email=\(account!)&code=\(codeText.text!)"
         let codejson = DatabasePost().postDatabase(URL: "http://mmlab.lhu.edu.tw/friendcode(swift).php", valuedata: postvalue)
         
         var jsoncount = codejson.count

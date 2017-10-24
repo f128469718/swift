@@ -10,11 +10,17 @@
 		844A2AFE1F8F1EF2002E1F83 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A2AFD1F8F1EF2002E1F83 /* UserData.swift */; };
 		844A2B001F8F1F10002E1F83 /* SolveRiddleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A2AFF1F8F1F10002E1F83 /* SolveRiddleData.swift */; };
 		844A2B021F8F1F2B002E1F83 /* RiddleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A2B011F8F1F2B002E1F83 /* RiddleData.swift */; };
+		847C88A51F95DA06004913D3 /* CodeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C88A41F95DA06004913D3 /* CodeScene.swift */; };
+		8487450F1F96EC620077090B /* InviteFriendScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487450E1F96EC620077090B /* InviteFriendScene.swift */; };
+		848745111F972CE60077090B /* MessageScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848745101F972CE60077090B /* MessageScene.swift */; };
 		84993FCE1F8DE8BD002A543D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84993FCD1F8DE8BD002A543D /* AppDelegate.swift */; };
 		84993FD61F8DE8BD002A543D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84993FD51F8DE8BD002A543D /* GameViewController.swift */; };
 		84993FD91F8DE8BD002A543D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84993FD71F8DE8BD002A543D /* Main.storyboard */; };
 		84993FDB1F8DE8BD002A543D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84993FDA1F8DE8BD002A543D /* Assets.xcassets */; };
 		84993FDE1F8DE8BD002A543D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84993FDC1F8DE8BD002A543D /* LaunchScreen.storyboard */; };
+		84EA963A1F9DA736007F4299 /* SendFriendsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EA96391F9DA736007F4299 /* SendFriendsScene.swift */; };
+		84EA96411F9DBCBC007F4299 /* FriendTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EA963F1F9DBCBC007F4299 /* FriendTableCell.swift */; };
+		84EA96421F9DBCBC007F4299 /* FriendTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84EA96401F9DBCBC007F4299 /* FriendTableCell.xib */; };
 		84F1ADE91F907A100084F48E /* FriendsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F1ADE81F907A100084F48E /* FriendsData.swift */; };
 		84F1ADEB1F907A270084F48E /* CreateRiddleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F1ADEA1F907A270084F48E /* CreateRiddleData.swift */; };
 		84F1ADED1F907A3B0084F48E /* CountryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F1ADEC1F907A3B0084F48E /* CountryData.swift */; };
@@ -52,6 +58,9 @@
 		844A2AFD1F8F1EF2002E1F83 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		844A2AFF1F8F1F10002E1F83 /* SolveRiddleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolveRiddleData.swift; sourceTree = "<group>"; };
 		844A2B011F8F1F2B002E1F83 /* RiddleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiddleData.swift; sourceTree = "<group>"; };
+		847C88A41F95DA06004913D3 /* CodeScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeScene.swift; sourceTree = "<group>"; };
+		8487450E1F96EC620077090B /* InviteFriendScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteFriendScene.swift; sourceTree = "<group>"; };
+		848745101F972CE60077090B /* MessageScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageScene.swift; sourceTree = "<group>"; };
 		84993FCA1F8DE8BD002A543D /* Riddle Me There.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Riddle Me There.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84993FCD1F8DE8BD002A543D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84993FD51F8DE8BD002A543D /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +68,9 @@
 		84993FDA1F8DE8BD002A543D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84993FDD1F8DE8BD002A543D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84993FDF1F8DE8BD002A543D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84EA96391F9DA736007F4299 /* SendFriendsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFriendsScene.swift; sourceTree = "<group>"; };
+		84EA963F1F9DBCBC007F4299 /* FriendTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableCell.swift; sourceTree = "<group>"; };
+		84EA96401F9DBCBC007F4299 /* FriendTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendTableCell.xib; sourceTree = "<group>"; };
 		84F1ADE81F907A100084F48E /* FriendsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsData.swift; sourceTree = "<group>"; };
 		84F1ADEA1F907A270084F48E /* CreateRiddleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRiddleData.swift; sourceTree = "<group>"; };
 		84F1ADEC1F907A3B0084F48E /* CountryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryData.swift; sourceTree = "<group>"; };
@@ -160,6 +172,10 @@
 				84F1AE1D1F9095800084F48E /* AnswerScene.swift */,
 				84F1AE1F1F9096760084F48E /* AreaScene.swift */,
 				84F732251F94540700511E78 /* InviteReward.swift */,
+				847C88A41F95DA06004913D3 /* CodeScene.swift */,
+				8487450E1F96EC620077090B /* InviteFriendScene.swift */,
+				848745101F972CE60077090B /* MessageScene.swift */,
+				84EA96391F9DA736007F4299 /* SendFriendsScene.swift */,
 			);
 			path = "Riddle Me There";
 			sourceTree = "<group>";
@@ -180,6 +196,8 @@
 				84F1AE031F9088510084F48E /* Alertable.swift */,
 				84F1AE1B1F9095250084F48E /* CreateScene_Camera.swift */,
 				84F1AE221F9097450084F48E /* CustomTableCell.swift */,
+				84EA963F1F9DBCBC007F4299 /* FriendTableCell.swift */,
+				84EA96401F9DBCBC007F4299 /* FriendTableCell.xib */,
 			);
 			path = Allfunc;
 			sourceTree = "<group>";
@@ -243,6 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84EA96421F9DBCBC007F4299 /* FriendTableCell.xib in Resources */,
 				84993FD91F8DE8BD002A543D /* Main.storyboard in Resources */,
 				84993FDB1F8DE8BD002A543D /* Assets.xcassets in Resources */,
 				84993FDE1F8DE8BD002A543D /* LaunchScreen.storyboard in Resources */,
@@ -269,6 +288,8 @@
 				84F1ADE91F907A100084F48E /* FriendsData.swift in Sources */,
 				84F1ADEB1F907A270084F48E /* CreateRiddleData.swift in Sources */,
 				84F1AE1E1F9095800084F48E /* AnswerScene.swift in Sources */,
+				8487450F1F96EC620077090B /* InviteFriendScene.swift in Sources */,
+				848745111F972CE60077090B /* MessageScene.swift in Sources */,
 				84F1AE161F908BC30084F48E /* ExtraScene.swift in Sources */,
 				84F1ADED1F907A3B0084F48E /* CountryData.swift in Sources */,
 				84F1AE231F9097450084F48E /* CustomTableCell.swift in Sources */,
@@ -276,8 +297,10 @@
 				84F1AE101F908B680084F48E /* LocalScene.swift in Sources */,
 				84F1ADF01F907B390084F48E /* ShowTableview.swift in Sources */,
 				84F1AE081F9089160084F48E /* RegisterScene.swift in Sources */,
+				84EA96411F9DBCBC007F4299 /* FriendTableCell.swift in Sources */,
 				84F1AE041F9088510084F48E /* Alertable.swift in Sources */,
 				84F1AE0A1F908B080084F48E /* MenuScene.swift in Sources */,
+				847C88A51F95DA06004913D3 /* CodeScene.swift in Sources */,
 				84F1AE1C1F9095250084F48E /* CreateScene_Camera.swift in Sources */,
 				84F1AE021F9088380084F48E /* Composer.swift in Sources */,
 				844A2AFE1F8F1EF2002E1F83 /* UserData.swift in Sources */,
@@ -289,6 +312,7 @@
 				844A2B021F8F1F2B002E1F83 /* RiddleData.swift in Sources */,
 				84F1ADFE1F907BFC0084F48E /* DatabasePost.swift in Sources */,
 				84F1AE0E1F908B410084F48E /* CreateScene.swift in Sources */,
+				84EA963A1F9DA736007F4299 /* SendFriendsScene.swift in Sources */,
 				84F1ADF21F907B510084F48E /* ShowPickerViewUI.swift in Sources */,
 				84F1AE201F9096760084F48E /* AreaScene.swift in Sources */,
 				84F1AE141F908BA90084F48E /* ScoresScene.swift in Sources */,

@@ -291,7 +291,7 @@ class LocalScene: SKScene , MKMapViewDelegate , UITableViewDelegate, UITableView
         print("S")
         
         var postvalue = "email=\(account!)&lat=\(currentLocation.coordinate.latitude)&lon=\(currentLocation.coordinate.longitude)&range=small"
-        let riddlejson = DatabasePost().postDatabase(URL: "http://140.131.12.56/swift/searchriddle.php", valuedata: postvalue)
+        let riddlejson = DatabasePost().postDatabase(URL: "http://mmlab.lhu.edu.tw/searchriddle(swift).php", valuedata: postvalue)
         
         
         var jsoncount = riddlejson.count

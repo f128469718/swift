@@ -63,7 +63,7 @@ class GameViewController: UIViewController {
             print(currentLocation.coordinate.longitude,"123")
         }
         
-        let scene = InviteReward(size:CGSize(width: 480, height: 320))
+        let scene = ScoresScene(size:CGSize(width: 480, height: 320))
         
         
         let skView = self.view as! SKView

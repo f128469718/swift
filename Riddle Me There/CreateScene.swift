@@ -87,7 +87,7 @@ class CreateScene: SKScene,UIImagePickerControllerDelegate,UINavigationControlle
         
         //let creatjson = DatabasePost().postDatabase(URL: "http://140.131.12.56/swift/createriddle.php", valuedata: postdata)
         
-        let creatjson = DatabasePost().uploadImage(URL: "http://140.131.12.56/swift/createriddle.php", pic: Riddlepic, email: account, title: titlefield.text!, riddle: riddlefield.text!)
+        let creatjson = DatabasePost().uploadImage(URL: "http://mmlab.lhu.edu.tw/createriddle(swift).php", pic: Riddlepic, email: account, title: titlefield.text!, riddle: riddlefield.text!)
         
         /* var jsoncount = creatjson.count
          
